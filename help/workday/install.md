@@ -12,9 +12,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 8f12b524-2123-45d4-98d5-b2b23580a5ea
-source-git-commit: d462ccf41fa5483cfa02f5eaf154c23f26157a1e
+source-git-commit: ba5e0fccfdb7cd278cc0ae57dc03da1e17b51577
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: '1133'
 ht-degree: 23%
 
 ---
@@ -170,7 +170,7 @@ Adobe Sign es el socio de la integración y debe ponerse en contacto con el mism
 Los clientes de Adobe Sign deben ponerse en contacto con el administrador de satisfacción del cliente (CSM) para obtener asistencia. También puede ponerse en contacto con el servicio de asistencia técnica de Adobe por teléfono: llame al 1-866-318-4100, espere a la lista de productos y luego introduzca 4 y 2 (tal y como se lo pidan).
 
 * [Adición de etiquetas de texto de Adobe a documentos](https://adobe.com/go/adobesign_text_tag_guide)
-* [Revisar la configuración del documento y ejemplos](https://experienceleague.adobe.com/docs/dc-sign-integrations/using/workday/quick-start.html?lang=en){target=&quot;_blank&quot;}
+* [Revisar la configuración y los ejemplos del documento](https://www.adobe.com/go/adobesign_workday_quick_start)
 
 ## Preguntas habituales {#faq}
 

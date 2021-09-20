@@ -12,7 +12,7 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: beafe6c0-262f-4f5b-9315-a023a4eef4a2
-source-git-commit: d462ccf41fa5483cfa02f5eaf154c23f26157a1e
+source-git-commit: ba5e0fccfdb7cd278cc0ae57dc03da1e17b51577
 workflow-type: tm+mt
 source-wordcount: '998'
 ht-degree: 34%
@@ -135,7 +135,7 @@ La funcionalidad de Adobe Sign ahora se puede agregar a cualquier proceso empres
 
 ### Configurar el paso Revisar documento {#configure-the-review-document-step}
 
-El documento del paso Revisar documento puede ser un documento estático; un documento generado por un paso Generar documento dentro del mismo proceso empresarial; o bien, un informe con formato creado con el [!DNL Workday] Diseñador de informes. Todos estos casos se puede aumentar con las [etiquetas de texto de Adobe](https://adobe.com/go/adobesign_text_tag_guide_es) para controlar el aspecto y la posición de los componentes específicos de Adobe Sign. El origen del documento debe especificarse dentro de la definición de procesos empresariales. No es posible cargar un documento ad hoc mientras se está ejecutando el proceso empresarial.
+El documento para el paso Revisar documento puede ser un documento estático; un documento generado por un paso Generar documento dentro del mismo proceso empresarial; o bien, un informe con formato creado con el [!DNL Workday] Diseñador de informes. Todos estos casos se puede aumentar con las [etiquetas de texto de Adobe](https://adobe.com/go/adobesign_text_tag_guide_es) para controlar el aspecto y la posición de los componentes específicos de Adobe Sign. El origen del documento debe especificarse dentro de la definición de procesos empresariales. No es posible cargar un documento ad hoc mientras se está ejecutando el proceso empresarial.
 
 La capacidad de tener grupos de firmantes serializados es exclusiva del uso de Adobe Sign con un paso Revisar documento. Los grupos de firmantes le permiten especificar grupos basados en roles que firman en secuencia. Adobe Sign no admite grupos de firma paralelos.
 
@@ -163,6 +163,6 @@ Los clientes de Adobe Sign deben ponerse en contacto con el administrador de sat
 
 * [Adición de etiquetas de texto de Adobe a los documentos](https://adobe.com/go/adobesign_text_tag_guide)
 
-* [Revisar la configuración del documento y los ejemplos](https://experienceleague.adobe.com/docs/dc-sign-integrations/using/workday/quick-start.html)
+* [Revisar la configuración del documento y los ejemplos](https://www.adobe.com/go/adobesign_workday_quick_start)
 
 [**Contactar con el servicio de soporte técnico de Adobe Sign**](https://adobe.com/go/adobesign-support-center_es)
