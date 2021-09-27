@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 3f826e88969562a69279a29dfdd98775ec01fd51
+source-git-commit: c25be043b404e9bf7a90496d4e47c1f22069313d
 workflow-type: tm+mt
-source-wordcount: '3061'
+source-wordcount: '3043'
 ht-degree: 2%
 
 ---
@@ -122,7 +122,7 @@ Para lograr una integración satisfactoria de la caja fuerte, se crea un nuevo p
 
 ![Imagen de los detalles del evento de firma](images/security-profiles.png)
 
-Todos los perfiles de seguridad de los usuarios que necesiten acceder al historial de Adobe Sign en Vault deben tener permiso de lectura para los objetos de firma, firma y evento de firma.
+Los perfiles de seguridad de los usuarios que necesiten acceder al historial de Adobe Sign en Vault deben tener permisos de lectura para los objetos de firma, firma y evento de firma.
 
 ![Imagen de los detalles del evento de firma](images/set-permissions.png)
 
@@ -294,7 +294,7 @@ Un administrador de cuentas de Adobe Sign debe seguir los pasos que se indican a
 
    ![Imagen](images/middleware-signin.png)
 
-   Una vez que el usuario ha iniciado sesión, la página muestra el ID de correo electrónico asociado en la esquina superior derecha y una ficha Configuración adicional, como se muestra a continuación.
+   Después de iniciar sesión correctamente, la página muestra el ID de correo electrónico asociado y una ficha Configuración, como se muestra a continuación.
 
    ![Imagen](images/middleware_settings.png)
 

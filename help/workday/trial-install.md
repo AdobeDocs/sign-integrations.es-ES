@@ -12,9 +12,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: beafe6c0-262f-4f5b-9315-a023a4eef4a2
-source-git-commit: 3f826e88969562a69279a29dfdd98775ec01fd51
+source-git-commit: c25be043b404e9bf7a90496d4e47c1f22069313d
 workflow-type: tm+mt
-source-wordcount: '1000'
+source-wordcount: '995'
 ht-degree: 33%
 
 ---
@@ -49,7 +49,7 @@ En el plazo de un día hábil, un especialista en incorporación de Adobe Sign a
 
 ![Correo electrónico de bienvenida de Adobe Sign](images/welcome-email-2020.png)
 
-Siga las instrucciones del correo electrónico para inicializar su cuenta y acceder a su página de Adobe Sign [!UICONTROL Home].
+Para inicializar su cuenta y acceder a su página de Adobe Sign [!UICONTROL Home], siga las instrucciones del correo electrónico .
 
 ![Panel Adobe Sign](images/classic-home.png)
 
@@ -165,4 +165,4 @@ Los clientes de Adobe Sign deben ponerse en contacto con el administrador de sat
 
 * [Revisar la configuración del documento y ejemplos](https://www.adobe.com//go/adobesign_workday_quick_start){target=&quot;_blank&quot;}
 
-[**Contactar con el servicio de soporte técnico de Adobe Sign**](https://adobe.com/go/adobesign-support-center_es)
+[**Contactar con el servicio de soporte técnico de Adobe Sign**](https://www.adobe.com/go/adobesign-support-center)
