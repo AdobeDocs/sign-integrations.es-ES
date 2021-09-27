@@ -12,10 +12,10 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: beafe6c0-262f-4f5b-9315-a023a4eef4a2
-source-git-commit: 78d6cafa720b41bd638c2ef723b2d4a2def19cd5
+source-git-commit: 3f826e88969562a69279a29dfdd98775ec01fd51
 workflow-type: tm+mt
-source-wordcount: '998'
-ht-degree: 34%
+source-wordcount: '1000'
+ht-degree: 33%
 
 ---
 
@@ -94,7 +94,7 @@ Para generar una clave de integración en Adobe Sign:
    ![Vínculo de la clave de integración](images/integration-key.png)
 
 1. Copie esta clave y guárdela en un lugar seguro para el siguiente paso.
-1. Haga clic en **[!UICONTROL Aceptar]**.
+1. Haga clic en **[!UICONTROL OK]**.
 
    ![Panel de la clave de integración](images/copy-the-key-575.png)
 
@@ -127,7 +127,7 @@ Para instalar la clave de integración:
 
    1. Pegue la clave de integración en el campo [!UICONTROL Clave de integración de API de Adobe Sign].
    1. Introduzca la dirección de correo electrónico del administrador de Adobe Sign en el campo [!UICONTROL Dirección de correo electrónico del remitente de Adobe Document Cloud].
-   1. Haga clic en **[!UICONTROL Aceptar]**.
+   1. Haga clic en **[!UICONTROL OK]**.
 
    ![Los campos de la clave de integración y el campo del correo electrónico del titular de la clave](images/bp-filled-small.png)
 
@@ -163,6 +163,6 @@ Los clientes de Adobe Sign deben ponerse en contacto con el administrador de sat
 
 * [Adición de etiquetas de texto de Adobe a los documentos](https://adobe.com/go/adobesign_text_tag_guide)
 
-* [Revisar la configuración del documento y los ejemplos](https://www.adobe.com//go/adobesign_workday_quick_start)
+* [Revisar la configuración del documento y ejemplos](https://www.adobe.com//go/adobesign_workday_quick_start){target=&quot;_blank&quot;}
 
 [**Contactar con el servicio de soporte técnico de Adobe Sign**](https://adobe.com/go/adobesign-support-center_es)
