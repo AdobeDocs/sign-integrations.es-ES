@@ -7,9 +7,9 @@ type: Documentation
 solution: Adobe Sign
 role: User, Developer
 topic: Integrations
-source-git-commit: 27610773d47a947dbfa1deb3f594667406a9aefb
+source-git-commit: 40fe3649aab0499ce8e5fbd1b11308ffbd759a44
 workflow-type: tm+mt
-source-wordcount: '2336'
+source-wordcount: '2354'
 ht-degree: 1%
 
 ---
@@ -124,7 +124,7 @@ Para agregar acuerdos de EchoSign a otros [!DNL SugarCRM] módulos:
 **Otros pasos de configuración**
 
 * **Ocultar  [!DNL EchoSign] módulos**: Puede ocultar los módulos  [!DNL EchoSign] Destinatarios y  [!DNL EchoSign] Eventos yendo a Administración&quot; Mostrar fichas y subpaneles del módulo y moviéndolos a la columna oculta.
-* **Deshabilitando packageScan**: Si ha habilitado packageScan en su propio sistema, deberá desactivarlo durante la instalación. Si utiliza [!DNL SugarCRM] A petición, póngase en contacto con el soporte [!DNL SugarCRM] para deshabilitar packageScan por usted.
+* **Deshabilitando packageScan**: Si ha habilitado packageScan en su propio sistema, deberá desactivarlo durante la instalación. Si está utilizando [!DNL SugarCRM] A petición, póngase en contacto con el soporte [!DNL SugarCRM] para deshabilitar packageScan por usted.
 
 ## Desinstalar el complemento {#uninstall-plugin}
 
@@ -247,6 +247,10 @@ Nota: Si se envía un acuerdo [!DNL EchoSign] para su firma y se elimina el regi
 El subpanel [!UICONTROL Eventos] de un acuerdo [!DNL EchoSign] realiza un seguimiento del estado de los acuerdos que se envían para su firma. Para ver las actualizaciones más recientes de un [!DNL EchoSign] acuerdo, seleccione **[!UICONTROL Estado de actualización]**. El botón [!UICONTROL Actualizar estado] solo está disponible después de enviar un acuerdo para su firma.
 
 ![Imagen](images/update-cancel-status.png)
+
+Después de enviar un acuerdo para su firma, seleccione **[!UICONTROL Actualizar estado]** para recuperar el estado más reciente.
+
+![Imagen](images/events-subpanel.png)
 
 ### Enviar recordatorios {#send-reminders}
 
