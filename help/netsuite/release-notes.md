@@ -1,17 +1,17 @@
 ---
 title: Notas de la versión de Adobe Sign para NetSuite
-description: 'Obtenga más información sobre las nuevas funciones y los cambios que se incluyen en la versión actual de la integración de Adobe Sign para NetSuite.  '
+description: Obtenga más información sobre las nuevas funciones y los cambios que se incluyen en la versión actual de la integración de Adobe Sign para NetSuite.
 type: Documentation
 solution: Adobe Sign
 role: User, Developer
 topic: Integrations
-source-git-commit: 27610773d47a947dbfa1deb3f594667406a9aefb
+exl-id: 6317723e-447a-4506-a621-4d967bdd6561
+source-git-commit: f8d0bc748872e675dc1c638eb4050efe9e3147ef
 workflow-type: tm+mt
 source-wordcount: '849'
 ht-degree: 5%
 
 ---
-
 
 # Notas de la versión de Adobe Sign para NetSuite
 
