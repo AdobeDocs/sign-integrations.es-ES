@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: d8071d9aa23351e31a9360d3c4d17f6297d0e2f1
+source-git-commit: 45bc2d698396bb07c4a246930d34b7e2ad0f6648
 workflow-type: tm+mt
-source-wordcount: '3115'
+source-wordcount: '3113'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ Los pasos de alto nivel para completar la integración son:
 
 ## Configure [!DNL Veeva Vault]
 
-Para configurar [!DNL Veeva Vault] para la integración con Adobe Sign, creamos ciertos objetos que ayudan a realizar un seguimiento del historial de un ciclo de vida de un acuerdo en Vault. Los administradores deben crear los siguientes objetos:
+Para configurar [!DNL Veeva Vault] para la integración con Adobe Sign, cree ciertos objetos que ayuden a realizar un seguimiento del historial de un ciclo de vida de un acuerdo en Vault. Los administradores deben crear los siguientes objetos:
 
 * Firma
 * Firmante
@@ -57,7 +57,7 @@ El objeto Signature se crea para almacenar información relacionada con el acuer
 | Campo | Etiqueta | Tipo | Descripción |
 | --- | --- | ---| --- | 
 | external_id__c | Id de acuerdo | Cadena (100) | Contiene el ID exclusivo del acuerdo de Adobe Sign |
-| file_hash__c | Archivo hash | Cadena (50) | Contiene la suma de bloque md5 del archivo que se ha enviado a Adobe Sign |
+| file_hash__c | Archivo hash | Cadena (50) | Contiene la suma de comprobación md5 del archivo que se ha enviado a Adobe Sign |
 | name__v | Nombre | Cadena (128) | Contiene el nombre del acuerdo |
 | sender__c | Remitente | Objeto (usuario) | Contiene la referencia al usuario de Vault que ha creado el acuerdo |
 | signature_status__c | Estado de firma | Cadena (75) | Mantiene el estado del acuerdo en Adobe Sign |
@@ -122,7 +122,7 @@ Para lograr una integración satisfactoria de la caja fuerte, se crea un nuevo p
 
 ![Imagen de los detalles del evento de firma](images/security-profiles.png)
 
-Los perfiles de seguridad de los usuarios que necesiten acceder al historial de Adobe Sign en Vault deben tener permisos de lectura para los objetos de firma, firma y evento de firma.
+Los perfiles de seguridad de los usuarios que requieren acceso al historial de Adobe Sign en Vault deben tener permisos de lectura para los objetos de firma, firma y evento de firma.
 
 ![Imagen de los detalles del evento de firma](images/set-permissions.png)
 
@@ -223,7 +223,7 @@ Cuando se envía un documento de Vault a Adobe Sign, su estado debe corresponder
 
    ![Imagen del estado del ciclo de vida 1](images/lifecycle-state1.png)
 
-* **En Adobe Sign Draft**: Es un nombre de marcador de posición para el estado que indica que el documento ya se ha cargado en Adobe Sign y que su acuerdo está en estado DRAFT. Es un estado obligatorio. Este estado debe indicar las cinco acciones de usuario siguientes:
+* **En Adobe Sign Draft**: Es un nombre de marcador de posición para el estado que indica que el documento ya se ha cargado en Adobe Sign y que su acuerdo está en estado DRAFT. Es un estado obligatorio. Este estado debe definir las siguientes cinco acciones de usuario:
 
    * Acción que cambia el estado del documento al estado *En Adobe Sign Authoring*. El nombre de esta acción de usuario debe ser el mismo para todos los tipos de documento para cualquier ciclo de vida. Si es necesario, los criterios para esta acción se pueden establecer en &quot;Permitir acciones de usuario de Adobe Sign es igual a Sí&quot;.
    * Acción que cambia el estado del documento a *En estado de firma de Adobe*. El nombre de esta acción de usuario debe ser el mismo para todos los tipos de documento para cualquier ciclo de vida. Si es necesario, los criterios para esta acción se pueden establecer en &quot;Permitir acciones de usuario de Adobe Sign es igual a Sí&quot;.
@@ -283,7 +283,7 @@ Una vez que los ciclos de vida estén correctamente configurados, el sistema deb
 
 ## Conectar [!DNL Veeva Vault] a Adobe Sign con middleware {#connect-middleware}
 
-Después de completar la configuración para [!DNL Veeva Vault] y la cuenta de administrador de Adobe Sign, el administrador debe crear una conexión entre las dos cuentas mediante middleware. La [!DNL Veeva Vault] y la conexión de cuenta de Adobe Sign se inician mediante Adobe Sign Identity y, a continuación, se utilizan para almacenar la identidad de Veeva Vault.
+Después de completar la configuración para [!DNL Veeva Vault] y la cuenta de administrador de Adobe Sign, el administrador debe crear una conexión entre las dos cuentas mediante middleware. La conexión de cuentas [!DNL Veeva Vault] y Adobe Sign la inicia Adobe Sign Identity y, a continuación, se utiliza para almacenar la identidad de Veeva Vault.
 Para la seguridad y estabilidad del sistema, el administrador debe utilizar una cuenta dedicada de [!DNL Veeva Vault] sistema/servicio/utilidad, como `adobe.for.veeva@xyz.com`, en lugar de una cuenta de usuario personal, como `bob.smith@xyz.com`.
 
 Un administrador de cuentas de Adobe Sign debe seguir los pasos que se indican a continuación para conectar [!DNL Veeva Vault] a Adobe Sign mediante middleware:
