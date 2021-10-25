@@ -22,7 +22,7 @@ ht-degree: 27%
    + [Tutorial de integración](workday/tutorial-video.md)
 + Adobe Sign para Coupa BSM Suite {#coupa}
    + [Guía de instalación](coupa/install.md)
-+ Adobe Sign para Veva Vault {#veeva}
++ Adobe Sign para Veeva Vault {#veeva}
    + [Guía de instalación](veeva/install.md)
    + [Guía del usuario](veeva/user.md)
 + Adobe Sign para NetSuite {#netsuite}
