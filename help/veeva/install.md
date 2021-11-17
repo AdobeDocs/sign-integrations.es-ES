@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 1c95f3eb0ddb077cad53a82b1a56358637839b16
+source-git-commit: 7ded835b48519cba656f160e691c697c91e2c8d0
 workflow-type: tm+mt
-source-wordcount: '3113'
+source-wordcount: '3131'
 ht-degree: 2%
 
 ---
@@ -39,7 +39,7 @@ Los pasos de alto nivel para completar la integración son:
 >
 >El administrador de Adobe Sign debe realizar los pasos de configuración de Adobe Sign en Adobe Sign.
 
-## Configure [!DNL Veeva Vault]
+## Configure [!DNL Veeva Vault] {#configure-veeva}
 
 Para configurar [!DNL Veeva Vault] para la integración con Adobe Sign, cree determinados objetos que ayuden a realizar un seguimiento del historial de un ciclo de vida de un acuerdo en Vault. Los administradores deben crear los siguientes objetos:
 
@@ -180,11 +180,11 @@ La integración de Adobe Sign y Vault requiere la creación y configuración de 
 
 * **Crear Adobe Sign**: Crea o muestra Adobe Sign Agreement.
 
-   Tipo: Destino del documento: Mostrar en URL de almacén: <https://{integrationDomain}/veevavaultintsvc/partner/agreement?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultId=${Vault.Id>}
+   Tipo: Destino del documento: Mostrar en URL de almacén: <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
 
 * **Cancelar Adobe Sign**: Cancela un acuerdo existente en Adobe Sign y devuelve el estado de un documento al inicial.
 
-   Tipo: Destino del documento: Mostrar en URL de almacén: <https://{integrationDomain}/veevavaultintsvc/partner/agreement/cancel?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultId=${Vault.Id>}
+   Tipo: Destino del documento: Mostrar en URL de almacén: : <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement/cancel?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
 
 ## Actualizar el ciclo de vida del documento {#document-lifecycle}
 
@@ -217,7 +217,7 @@ Cuando se envía un documento de Vault a Adobe Sign, su estado debe corresponder
    * Acción que cambia el estado del documento a *En Adobe Sign Draft* estado. El nombre de esta acción de usuario debe ser el mismo para todos los tipos de documento para cualquier ciclo de vida. Si es necesario, los criterios para esta acción se pueden establecer en &quot;Permitir acciones de usuario de Adobe Sign es igual a Sí&quot;.
    * Acción que llama a la acción web &quot;Adobe Sign&quot;. Este estado debe tener seguridad que permita a la función de administración de Adobe Sign: ver el documento, ver el contenido, editar campos, editar relaciones, descargar el origen, administrar la representación visible y cambiar el estado.
 
-   ![Imagen del estado del ciclo de vida 1](images/lifecycle-state1.png)
+      ![Imagen del estado del ciclo de vida 1](images/lifecycle-state1.png)
 
 * **En Adobe Sign Draft**: Es un nombre de marcador de posición para el estado que indica que el documento ya se ha cargado en Adobe Sign y que su acuerdo está en estado DRAFT. Es un estado obligatorio. Este estado debe definir las siguientes cinco acciones de usuario:
 
@@ -227,7 +227,7 @@ Cuando se envía un documento de Vault a Adobe Sign, su estado debe corresponder
    * Acción que llama a la acción web &quot;Adobe Sign&quot; .
    * Acción que llama a la acción web &quot;Cancelar Adobe Sign&quot;. Este estado debe tener seguridad que permita a la función de administrador de Adobe Sign: ver el documento, ver el contenido, editar campos, editar relaciones, descargar el origen, administrar la representación visible y cambiar el estado.
 
-   ![Imagen del estado 2 del ciclo de vida](images/lifecycle-state2.png)
+      ![Imagen del estado 2 del ciclo de vida](images/lifecycle-state2.png)
 
 * **En Adobe Sign Authoring**: Es un nombre de marcador de posición para el estado que indica que el documento ya se ha cargado en Adobe Sign y que su acuerdo está en estado AUTHORING o DOCUMENTS_NOT_YET_PROCESSED. Es un estado obligatorio. Este estado debe tener definidas cuatro acciones de usuario:
 
@@ -236,7 +236,7 @@ Cuando se envía un documento de Vault a Adobe Sign, su estado debe corresponder
    * Acción que llama a la acción web &quot;Adobe Sign&quot;
    * Acción que llama a la acción web &quot;Cancelar Adobe Sign&quot;. Este estado debe tener seguridad que permita a la función de administrador de Adobe Sign: ver el documento, ver el contenido, editar campos, editar relaciones, descargar el origen, administrar la representación visible y cambiar el estado.
 
-   ![Imagen del estado del ciclo de vida 3](images/lifecycle-state3.png)
+      ![Imagen del estado del ciclo de vida 3](images/lifecycle-state3.png)
 
 * **Firma en Adobe**: Es un nombre de marcador de posición para el estado que indica que el documento se ha cargado en Adobe Sign y que su acuerdo ya se ha enviado a los participantes (estado OUT_FOR_SIGNATURE o OUT_FOR_APPROVAL). Es un estado obligatorio. Este estado debe tener definidas las cinco acciones de usuario siguientes:
 
@@ -246,7 +246,7 @@ Cuando se envía un documento de Vault a Adobe Sign, su estado debe corresponder
    * Acción que llama a la acción web *Adobe Sign*.
    * Acción que llama a Acción web *Cancelar Adobe Sign*. Este estado debe tener seguridad que permita a la función de administrador de Adobe Sign: ver el documento, ver el contenido, editar campos, editar relaciones, descargar el origen, administrar la representación visible y cambiar el estado.
 
-   ![Imagen del estado del ciclo de vida 4](images/lifecycle-state4.png)
+      ![Imagen del estado del ciclo de vida 4](images/lifecycle-state4.png)
 
 * **Adobe firmado (aprobado)**: Es un nombre de marcador de posición para el estado que indica que el documento se ha cargado en Adobe Sign y que el acuerdo se ha completado (estado FIRMADO o APROBADO). Es un estado obligatorio y puede ser un estado de ciclo de vida existente, como Aprobado.
 Este estado no requiere acciones del usuario. Este estado debe tener seguridad que permita a la función de administrador de Adobe Sign: ver documentos, ver contenido y editar campos.
@@ -262,6 +262,8 @@ En el siguiente diagrama se ilustran las asignaciones entre los estados del acue
 Los administradores deben crear un nuevo registro de grupo de tipo de documento denominado &quot;Documento de Adobe Sign&quot;. Este grupo de tipos de documento se añade para todas las clasificaciones de documentos que cumplen los requisitos para el proceso de Adobe Sign. Dado que la propiedad de grupo de tipo de documento no se hereda de tipo a subtipo ni de subtipo a nivel de clasificación, debe establecerse para cada clasificación de documento que sea apta para Adobe Sign.
 
 ![Imagen del tipo de documento](images/document-type.png)
+
+![Imagen del tipo de documento](images/document-edit-details.png)
 
 ### Crear configuración de función de usuario {#create-user-role-setup}
 
@@ -335,7 +337,7 @@ Un administrador de cuentas de Adobe Sign debe seguir los pasos que se indican a
 
 **Paso 2.** Cree un nuevo grupo de tipos de documento denominado &quot;Documento de Adobe Sign&quot;.
 
-**Paso 3.** Implemente el paquete.
+**Paso 3.** [Implementar el paquete](https://helpx.adobe.com/content/dam/help/en/PKG-AdobeSign-Integration.zip).
 
 **Paso 4.** Cree un nuevo grupo gestionado por el usuario denominado &quot;Adobe Sign Admin Group&quot;.
 
@@ -359,7 +361,7 @@ Un administrador de cuentas de Adobe Sign debe seguir los pasos que se indican a
 
 **Paso 2.** Cree un nuevo grupo de tipo de documento denominado &quot;Documento de Adobe Sign&quot;.
 
-**Paso 3.** Implemente el paquete.
+**Paso 3.** [Implementar el paquete](https://helpx.adobe.com/content/dam/help/en/PKG-AdobeSign-Integration.zip).
 
 **Paso 4.** Cree un nuevo grupo gestionado por el usuario denominado &quot;Adobe Sign Admin Group&quot;.
 
