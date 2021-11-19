@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 7ded835b48519cba656f160e691c697c91e2c8d0
+source-git-commit: aef70e46f24bb019b07092d84d69519fe16846e4
 workflow-type: tm+mt
-source-wordcount: '3131'
+source-wordcount: '3163'
 ht-degree: 2%
 
 ---
@@ -182,9 +182,13 @@ La integración de Adobe Sign y Vault requiere la creación y configuración de 
 
    Tipo: Destino del documento: Mostrar en URL de almacén: <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
 
+   ![Imagen de creación de Adobe Sign](images/create-adobe-sign.png)
+
 * **Cancelar Adobe Sign**: Cancela un acuerdo existente en Adobe Sign y devuelve el estado de un documento al inicial.
 
    Tipo: Destino del documento: Mostrar en URL de almacén: : <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement/cancel?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
+
+   ![Imagen de cancelar Adobe Sign](images/cancel-adobe-sign.png)
 
 ## Actualizar el ciclo de vida del documento {#document-lifecycle}
 
@@ -192,12 +196,16 @@ Para cada tipo de documento que cumple los requisitos para la firma de Adobe, el
 
 ### Función de ciclo de vida {#lifecycle-role}
 
-La función de la aplicación de administración de Adobe Sign debe agregarse en todos los ciclos de vida utilizados por los documentos que cumplen los requisitos para la firma de Adobe. Esta función debe crearse con las siguientes opciones:
-
-* Activar control de acceso dinámico
-* Reglas de uso compartido de documentos que solo incluyen grupo de tipo de documento
+La función de la aplicación de administración de Adobe Sign debe agregarse en todos los ciclos de vida utilizados por los documentos que cumplen los requisitos para la firma de Adobe, como se muestra a continuación.
 
 ![Imagen de las funciones de administración del ciclo de vida](images/document-lifecycle-admin-role.png)
+
+La función de administrador debe crearse con las siguientes opciones:
+
+* Control de acceso dinámico habilitado.
+* Reglas de uso compartido de documentos que solo incluyen el grupo de tipo de documento, como se muestra en la imagen siguiente.
+
+![Imagen de la regla de uso compartido de Adobe Sign](images/adobe-sign-sharing-rule.png)
 
 ### Estados del ciclo de vida {#lifecycle-states}
 
@@ -263,7 +271,9 @@ Los administradores deben crear un nuevo registro de grupo de tipo de documento 
 
 ![Imagen del tipo de documento](images/document-type.png)
 
-![Imagen del tipo de documento](images/document-edit-details.png)
+![Imagen de los detalles de edición del documento](images/document-edit-details.png)
+
+![Imagen de grupos de tipo de documento](images/document-type-groups.png)
 
 ### Crear configuración de función de usuario {#create-user-role-setup}
 
