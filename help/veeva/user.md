@@ -9,9 +9,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 39a43637-af3f-432e-a784-8f472aa86df5
-source-git-commit: e1394c24aebd1e026eb6c5a33935149f33ef8ea4
+source-git-commit: f460f23ac3e412b527a91668561fff48ac518941
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '667'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ El proceso general de envío de documentos para su firma es similar al envío de
 
 Integración de Adobe Sign con [!DNL Veeva Vault] agiliza y agiliza tus flujos de trabajo de documentos y firmas. Al utilizar el flujo de trabajo de integración:
 
-* Ahorro de tiempo y recursos dedicados al correo postal, las noches en vela y el envío de faxes.
+* Ahorra tiempo y recursos empleados en correos electrónicos, noches o faxes.
 * Envía contratos para su firma electrónica o aprobación desde [!DNL Veeva Vault], acceder al historial de contratos en tiempo real y ver los contratos guardados.
 * Realiza un seguimiento de los acuerdos en tiempo real en toda tu organización y obtén actualizaciones cuando se visualicen, firmen, cancelen o rechacen acuerdos.
 * eSign en más de 20 idiomas y admite el servicio de fax en más de 50 configuraciones regionales de todo el mundo.
@@ -103,11 +103,11 @@ Para enviar un acuerdo con Adobe Sign para Veeva:
 
    ![](images/iFrame-contact-administrator.png)
 
-1. Una vez procesado el documento, arrastre y suelte los campos de firma en el panel derecho y seleccione **[!UICONTROL Enviar]**.
+1. Una vez procesado el documento, arrastre y suelte los campos de firma del panel derecho y seleccione **[!UICONTROL Enviar]**.
 
    ![](images/add-signature-fields.png)
 
-1. Envía el documento al destinatario para su firma. Una vez que el destinatario recibe el correo electrónico del documento, el estado del documento cambia de [!UICONTROL Revisado] para [!UICONTROL En la firma de Adobe].
+1. Envía el documento a los destinatarios para que lo firmen. Una vez que el destinatario recibe el correo electrónico del documento, el estado del documento cambia de [!UICONTROL Revisado] para [!UICONTROL En la firma de Adobe].
 
    ![](images/in-adobe-signing.png)
 
