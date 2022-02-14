@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: c3ad36ec887230d746d8d2084127155615f1d0b9
+source-git-commit: db0d9022e520e9db39254e78b66aab8b913f353a
 workflow-type: tm+mt
-source-wordcount: '3145'
+source-wordcount: '3169'
 ht-degree: 3%
 
 ---
@@ -34,6 +34,7 @@ Los pasos de alto nivel para completar la integración son:
 * Cree copias y campos de documento.
 * Configure acciones web y actualice el ciclo de vida del documento.
 * Crear configuración de usuario y rol de usuario de tipo de documento.
+* Conecte Veeva Vault a Adobe Sign mediante middleware.
 
 >[!NOTE]
 >
@@ -233,13 +234,13 @@ La integración de Adobe Sign y Vault requiere la creación y configuración de 
 
 * **Crear Adobe Sign**: Crea o muestra el acuerdo de Adobe Sign.
 
-   Tipo: Destino del documento: Visualización en la URL de almacén: <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
+   Tipo: Destino del documento: Visualización en las credenciales de almacén: Activar credenciales de publ. de sesión mediante URL de publ. de mensaje: <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
 
    ![Imagen de create Adobe Sign](images/create-adobe-sign.png)
 
 * **Cancelar Adobe Sign**: Cancela un acuerdo existente en Adobe Sign y devuelve el estado de un documento al inicial.
 
-   Tipo: Destino del documento: Visualización en la URL de almacén: : <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement/cancel?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
+   Tipo: Destino del documento: Visualización en las credenciales de almacén: Activar credenciales de publ. de sesión mediante URL de publ. de mensaje: : <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement/cancel?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
 
    ![Imagen de cancelar Adobe Sign](images/cancel-adobe-sign.png)
 
