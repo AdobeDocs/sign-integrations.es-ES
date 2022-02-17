@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: db0d9022e520e9db39254e78b66aab8b913f353a
+source-git-commit: 535c4510e876c708679d7f6a800206264a9876e2
 workflow-type: tm+mt
-source-wordcount: '3169'
+source-wordcount: '3428'
 ht-degree: 3%
 
 ---
@@ -125,13 +125,51 @@ El objeto Evento de firma se crea para almacenar la información relacionada con
 | participant_role__c | Función de participante | Cadena | Tiene la función de participante en Adobe Sign |
 | signature__c | Firma | Objeto (firma) | Contiene la referencia al registro principal de la firma |
 
-![Imagen de los detalles del evento de firma](images/signature-event-object-details.png)
+![Imagen](images/signature-event-object-details.png)
 
 #### Objeto de bloqueo de proceso {#process-locker}
 
 Se crea un objeto de bloqueador de procesos para bloquear el proceso de integración de Adobe Sign. No requiere ningún campo personalizado.
 
 ![Imagen de los detalles del evento de firma](images/process-locker-details.png)
+
+Los objetos Signature, Signatory, Signature Event y Process Locker que forman parte del paquete de implementación tienen habilitada de forma predeterminada la propiedad &#39;Auditar cambios de datos para este objeto&#39;.
+
+**Nota:** Para incluir los cambios de datos de registro de objeto de captura de Vault en los registros de auditoría, habilite la opción Auditar cambios de datos. Este ajuste está desactivado de forma predeterminada. Una vez que haya habilitado esta configuración y creado registros, no podrá deshabilitarla. Si esta configuración está desactivada y existen registros, sólo un propietario del depósito puede actualizarla.
+
+#### **Mostrar participantes e historial para el objeto de firma** {#display-participants-history}
+
+El objeto Signature que viene como parte del paquete de implementación viene con la [Diseño de página de detalles de firma](https://vvtechpartner-adobe-rim.veevavault.com/ui/#admin/content_setup/object_schema/pagelayout?t=signature__c&amp;d=signature_detail_page_layout__c). El diseño de página tiene secciones para los participantes y el historial.
+
+* La *Participantes* tiene la sección Objetos relacionados que está configurada como se muestra en la imagen siguiente.
+
+   ![Imagen](images/edit-related-objects.png)
+
+* Puede editar las columnas que se mostrarán para los participantes, como se muestra a continuación.
+
+   ![Imagen](images/set-columns-to-display.png)
+
+* La *Historial* tiene la sección Objetos relacionados que está configurada como se muestra en la imagen siguiente.
+
+   ![Imagen](images/edit-related-object-in-history.png)
+
+* Puede editar las columnas que se mostrarán para el historial, como se muestra a continuación.
+
+   ![Imagen](images/select-columns-to-display.png)
+
+#### **Ver participantes e historial de auditoría del documento de Adobe Sign** {#view-participants-audit-history}
+
+* Para ver los participantes y el historial de auditoría del documento de Adobe Sign, seleccione el vínculo en la sección &quot;Firma de Adobe&quot; del documento.
+
+   ![Imagen](images/view-participants-audit-history.png)
+
+* La página que se abre muestra los participantes y el historial del documento de Adobe Sign, como se muestra a continuación.
+
+   ![Imagen](images/participants-and-history.png)
+
+* Consulte el seguimiento de auditoría para Firmar como se muestra a continuación.
+
+   ![Imagen](images/audit-trail.png)
 
 ### Paso 3. Configurar perfiles de seguridad {#security-profiles}
 
