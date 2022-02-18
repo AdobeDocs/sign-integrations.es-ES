@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 535c4510e876c708679d7f6a800206264a9876e2
+source-git-commit: 928bbadab28f041de2d8bc17ad8383f61033a6c0
 workflow-type: tm+mt
-source-wordcount: '3428'
+source-wordcount: '3431'
 ht-degree: 3%
 
 ---
@@ -135,7 +135,7 @@ Se crea un objeto de bloqueador de procesos para bloquear el proceso de integrac
 
 Los objetos Signature, Signatory, Signature Event y Process Locker que forman parte del paquete de implementación tienen habilitada de forma predeterminada la propiedad &#39;Auditar cambios de datos para este objeto&#39;.
 
-**Nota:** Para incluir los cambios de datos de registro de objeto de captura de Vault en los registros de auditoría, habilite la opción Auditar cambios de datos. Este ajuste está desactivado de forma predeterminada. Una vez que haya habilitado esta configuración y creado registros, no podrá deshabilitarla. Si esta configuración está desactivada y existen registros, sólo un propietario del depósito puede actualizarla.
+**Nota:** Puede hacer que Vault capture cambios de datos de registro de objeto en registros de auditoría habilitando la opción Auditar cambios de datos. Esta configuración está desactivada de forma predeterminada. Una vez que haya habilitado esta opción y creado registros, ya no podrá deshabilitarla. Si esta configuración está desactivada y existen registros, sólo un propietario del depósito puede actualizarla.
 
 #### **Mostrar participantes e historial para el objeto de firma** {#display-participants-history}
 
