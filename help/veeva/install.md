@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 04a3e58da81c1a034318807776077d0076eec85f
+source-git-commit: ad78f32d6c418ac9c7120899831b74bec9d5620d
 workflow-type: tm+mt
-source-wordcount: '3431'
+source-wordcount: '3503'
 ht-degree: 3%
 
 ---
@@ -60,6 +60,7 @@ Para configurar Adobe Sign para [!DNL Vault], un nuevo grupo denominado *Grupo d
 * Diseño de página de objeto firmante
 * Diseño de página de objeto de bloqueador de procesos
 * Tipo de representación de Adobe Sign
+* Tipo de copia original
 * Campo compartido signature__c , allow_adobe_sign_user_actions__c
 * Acción web de Adobe Sign
 * Cancelar acción web de Adobe Sign
@@ -266,6 +267,10 @@ El nuevo tipo de copia denominado *Adobe Sign Rendition (adobe_sign_rendition__c
 
 ![Imagen de tipos de representación](images/edit-details-clinical-type.png)
 
+El nuevo tipo de copia denominado *Copia original (original_rendition__c)* lo utiliza la integración del almacén como nombre de la copia que se debe utilizar para almacenar la copia visible original si el documento firmado se importa como copia visible.
+
+![Imagen](images/original-rendition.png)
+
 ### Paso 9. Actualizar acciones web {#web-actions}
 
 La integración de Adobe Sign y Vault requiere la creación y configuración de dos acciones web:
@@ -440,6 +445,10 @@ Un administrador de cuentas de Adobe Sign debe seguir los pasos que se indican a
    **Nota:** El aprovisionamiento automático de nuevos usuarios de Adobe Sign solo funciona si se ha habilitado en el nivel de cuenta de Adobe Sign en Adobe Sign, además de habilitar **[!UICONTROL Aprovisionamiento automático de usuarios de Sign]** para el[!DNL Veeva Vault]Integración con Adobe Sign como muestra el administrador de cuentas de Adobe Sign a continuación.
 
    ![Imagen](images/allow-auto-provisioning.png)
+
+1. Para configurar Adobe Sign Rendition para que se muestre en Veeva en lugar de Original Rendition, seleccione la casilla de verificación **[!UICONTROL Mostrar representación de Adobe Sign]**.
+
+   ![Imagen](images/edit-connection-dispplay-adobe-sign-rendition.png)
 
 1. Seleccionar **[!UICONTROL Guardar]** para guardar la nueva conexión.
 
