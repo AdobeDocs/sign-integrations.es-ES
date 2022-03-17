@@ -10,7 +10,7 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: b9d0ac0cccc8785469172fd805e7b878743c7c07
+source-git-commit: c108714c960b68342539da8e37ac88622c963ed5
 workflow-type: tm+mt
 source-wordcount: '3498'
 ht-degree: 3%
@@ -265,7 +265,7 @@ El nuevo tipo de copia denominado *Adobe Sign Rendition (adobe_sign_rendition__c
 
 ![Imagen de tipos de representación](images/rendition-type.png)
 
-![Imagen](images/edit-details-clinical-type.png)
+![Imagen](images/edit-details-clinical.png)
 
 El nuevo tipo de copia denominado *Copia original (original_rendition__c)* lo utiliza la integración del almacén como nombre de la copia que se debe utilizar para almacenar la copia visible original si el documento firmado se importa como copia visible.
 
