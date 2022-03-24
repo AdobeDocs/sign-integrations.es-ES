@@ -6,11 +6,11 @@ topic-tags: EchoSign/Integrations
 content-type: reference
 locnotes: All languages; screenshots for Tier 1 and 2 only (see the currently published localized page for guidance)
 type: Documentation
-solution: Adobe Sign
+solution: Acrobat Sign, Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: c108714c960b68342539da8e37ac88622c963ed5
+source-git-commit: b326a9afa2c16333d390cac3b30a2c7c741a4360
 workflow-type: tm+mt
 source-wordcount: '3498'
 ht-degree: 3%
@@ -77,7 +77,7 @@ El objeto de firma se crea para almacenar información relacionada con el acuerd
 
 | Campo | Etiqueta | Tipo | Descripción |
 | --- | --- | ---| --- | 
-| external_id__c | Id de acuerdo | Cadena (100) | Contiene el ID exclusivo del acuerdo de Adobe Sign |
+| external_id__c | ID del acuerdo | Cadena (100) | Contiene el ID exclusivo del acuerdo de Adobe Sign |
 | file_hash__c | Hash de archivo | Cadena (50) | Contiene la suma de comprobación md5 del archivo enviado a Adobe Sign |
 | name__v | Nombre | Cadena (128) | Contiene el nombre del acuerdo |
 | sender__c | Remitente | Objeto (usuario) | Contiene la referencia al usuario de Vault que ha creado el acuerdo |
@@ -98,7 +98,7 @@ El objeto de firmante se crea para almacenar información relacionada con los pa
 
 | Campo | Etiqueta | Tipo | Descripción |
 | --- | --- | ---| --- | 
-| email__c | Correo electrónico | Cadena (120) | Contiene el ID exclusivo del acuerdo de Adobe Sign |
+| email__c | Dirección de correo electrónico | Cadena (120) | Contiene el ID exclusivo del acuerdo de Adobe Sign |
 | external_id__c | ID de participante | Cadena (80) | Contiene el identificador único de participante de Adobe Sign |
 | name__v | Nombre | Cadena (128) | Contiene el nombre del participante de Adobe Sign |
 | order__c | Ordenar | Número | Conserva el número de pedido del participante del acuerdo de Adobe Sign |

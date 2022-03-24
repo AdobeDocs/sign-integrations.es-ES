@@ -4,14 +4,14 @@ description: Aprenda a configurar las integraciones de Adobe Sign
 audience: External
 products: Adobe Sign
 type: Documentation
-solution: Adobe Sign
+solution: Acrobat Sign, Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: b2fa280d-894c-47da-bbf5-8b4d0c6b6165
-source-git-commit: 27610773d47a947dbfa1deb3f594667406a9aefb
+source-git-commit: b326a9afa2c16333d390cac3b30a2c7c741a4360
 workflow-type: tm+mt
-source-wordcount: '127'
-ht-degree: 25%
+source-wordcount: '121'
+ht-degree: 26%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 25%
 
 ![banner](images/sign-banner.png)
 
-Aprenda a instalar, integrar y utilizar soluciones [!DNL Adobe Sign] para los sistemas, procesos y aplicaciones existentes de su organización.
+Aprenda a instalar, integrar y utilizar [!DNL Adobe Sign] soluciones a los sistemas, procesos y aplicaciones existentes de su organización.
 
 ## Artículos destacados
 
@@ -42,16 +42,16 @@ Aprenda a instalar, integrar y utilizar soluciones [!DNL Adobe Sign] para los si
     <div>
     <a href="workday/tutorial-video.md"><strong>Integración de Adobe Sign con [!DNL Workday]</strong></a>
     </div>
-    <em>Aprenda a configurar Adobe Sign para que funcione en [!DNL Workday] para administrar todos sus documentos</em>
+    <em>Aprenda a configurar Adobe Sign para trabajar con [!DNL Workday] para administrar todos sus documentos</em>
   </td>
   <td>
     <a href="https://community.adobe.com/t5/adobe-sign/bd-p/adobe-sign?page=1&amp;sort=latest_replies&amp;filter=all">
-    <img alt="Comunidad de soporte de Adobe Sign" src="images/sign-forum.png"/>
+    <img alt="Adobe Sign Support Community" src="images/sign-forum.png"/>
     </a>
     <div>
-    <a href="https://community.adobe.com/t5/adobe-sign/bd-p/adobe-sign?page=1&amp;sort=latest_replies&amp;filter=all"><strong>Comunidad de soporte de Adobe Sign</strong></a>
+    <a href="https://community.adobe.com/t5/adobe-sign/bd-p/adobe-sign?page=1&amp;sort=latest_replies&amp;filter=all"><strong>Adobe Sign Support Community</strong></a>
     </div>
-    <em>Haga preguntas, comparta comentarios y sugerencias, o comente sobre los productos y servicios de Sign Integration con otros usuarios y entusiastas de Adobe Sign.</em>
+    <em>Haga preguntas, comparta comentarios y sugerencias, o hable sobre los productos y servicios de la integración de Sign con otros usuarios y entusiastas de Adobe Sign.</em>
     <br>
   </td>
 </tr>
