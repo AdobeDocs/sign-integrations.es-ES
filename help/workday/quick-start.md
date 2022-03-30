@@ -28,7 +28,7 @@ Este documento está diseñado para ayudar [!DNL Workday] los administradores en
 
 * [!UICONTROL Business Process Framework]
 * Configuración y configuración del inquilino
-* Reporting and [!DNL Workday] Studio Integration
+* Informes y [!DNL Workday] Integración de Studio
 
 ## Acceso a Adobe Sign dentro de [!DNL Workday] {#access-adobe-sign}
 
@@ -36,13 +36,13 @@ Este documento está diseñado para ayudar [!DNL Workday] los administradores en
 
 ## [!UICONTROL Paso Review Document (Revisar documento)] {#review-document-step}
 
-Adobe Sign for [!DNL Workday] is exposed via the [!UICONTROL Review Document Step] that you can add to any of over 400 Business Processes within [!DNL Workday], including [!UICONTROL Offer], [!UICONTROL Distribute Documents and Tasks], [!UICONTROL Propose Compensation], and more.
+Adobe Sign para [!DNL Workday] se expone a través del [!UICONTROL Paso Revisar documento] que puede añadir a cualquiera de los más de 400 procesos empresariales de [!DNL Workday], incluidos [!UICONTROL Oferta], [!UICONTROL Distribuir documentos y tareas], [!UICONTROL Proponer compensación]y mucho más.
 
 Puede consultar la [[!DNL Workday] artículos de la comunidad sobre [!UICONTROL Paso Revisar documento]](https://doc.workday.com/#/reader/3DMnG~27o049IYFWETFtTQ/TboWWKQemecNipWgxLAjqg).
 
-Hay una relación 1:1 entre [!UICONTROL [!UICONTROL Paso Revisar documento]s] y las transacciones facturables con Adobe Sign. You can combine multiple documents within a single [!UICONTROL Review Document Step] and they are presented as a single package for signature.
+Hay una relación 1:1 entre [!UICONTROL [!UICONTROL Paso Revisar documento]s] y las transacciones facturables con Adobe Sign. Puede combinar varios documentos dentro de un mismo [!UICONTROL Paso Revisar documento] y se presentan como un único paquete para su firma.
 
-**Note**: Only a single *Dynamic* document can be referenced within a specific [!UICONTROL Review Document Step].
+**Nota**: Solo un *Dinámico* documento se puede hacer referencia dentro de un [!UICONTROL Paso Revisar documento].
 
 Para definir una función [!UICONTROL Paso Revisar documento]:
 
@@ -72,9 +72,9 @@ Para configurar el [!UICONTROL Paso Revisar documento]:
 
 En el menú de acciones relacionadas de un [!UICONTROL Paso Revisar documento], seleccione **[!UICONTROL Proceso empresarial]** > **[!UICONTROL Mantener redirección]**. A continuación, seleccione una de las siguientes opciones:
 
-* **[!UICONTROL Send Back]**: To enable security group members to send a step back to a prior step in the business process. El proceso empresarial se reiniciará desde ese paso.
+* **[!UICONTROL Enviar atrás]**: Para permitir que los miembros del grupo de seguridad envíen un paso atrás a un paso anterior del proceso empresarial. El proceso empresarial se reiniciará desde ese paso.
 * **[!UICONTROL Ir al paso siguiente]**: Para permitir que los miembros del grupo de seguridad reenvíen un paso al siguiente paso del proceso empresarial.
-* **[!UICONTROL Security Groups]**: To redirect steps in the business process flow. Los grupos de seguridad que se muestran en este mensaje se seleccionan en la directiva de seguridad del proceso empresarial de la sección Redirigir.
+* **[!UICONTROL Grupos de seguridad]**: Para redirigir pasos en el flujo del proceso empresarial. Los grupos de seguridad que se muestran en este mensaje se seleccionan en la directiva de seguridad del proceso empresarial de la sección Redirigir.
 
 ## Notas de los pasos del proceso empresarial {#business-process-step-notes}
 
@@ -88,11 +88,11 @@ En el menú de acciones relacionadas de un [!UICONTROL Paso Revisar documento], 
 
    Puede cambiar el orden de un paso cambiando el valor de orden. Por ejemplo, para insertar un paso entre los elementos &quot;c&quot; y &quot;d&quot;, especifique un nuevo elemento como &quot;ca&quot;.
 
-### Example: offer {#example-offer}
+### Ejemplo: oferta {#example-offer}
 
 La Oferta BP es un subproceso del [!UICONTROL BP dinámico de aplicación de trabajo] que debe configurarse para ejecutar la oferta de PA. Se activa cuando el estado de la aplicación de trabajo se mueve a &quot;[!UICONTROL Oferta]&quot; o &quot;[!UICONTROL Hacer oferta]&quot;.
 
-In the below example, a [!UICONTROL Review Document Step] is using a Dynamic Document step for both North America and Japan.
+En el ejemplo siguiente, un [!UICONTROL Paso Revisar documento] está utilizando un paso de documento dinámico para Norteamérica y Japón.
 
 ![[!DNL Workday]Ejemplo de un proceso empresarial de ](images/bp-for-offersmaller-575.png)
 
@@ -124,9 +124,9 @@ El comportamiento que se muestra a continuación enruta el documento generado di
 
 ![[!DNL Workday] grupos de firma definidos](images/configure-rd-stepsmaller-575.png)
 
-### Example: Distribute documents {#example-distribute-documents}
+### Ejemplo: Distribuir documentos {#example-distribute-documents}
 
-Introducido en [!DNL Workday] 30, la tarea Distribuir documentos o tareas de forma masiva se puede utilizar para enviar un único documento a un grupo grande (&lt;20K) de firmantes individuales. Dicha tarea está limitada a una única firma por documento. Creation of a distribution is performed by accessing the ‘[!UICONTROL Create Distribute Documents or Tasks]’ action from the search bar.
+Introducido en [!DNL Workday] 30, la tarea Distribuir documentos o tareas de forma masiva se puede utilizar para enviar un único documento a un grupo grande (&lt;20K) de firmantes individuales. Dicha tarea está limitada a una única firma por documento. La creación de una distribución se realiza accediendo a la[!UICONTROL Crear distribución de documentos o tareas]’ de la barra de búsqueda.
 
 Ejemplo: Enviar un formulario de elección de equidad de empleado a todos los responsables con [!UICONTROL Servicios modernos globales]. Si lo desea, puede filtrarlo a responsables individuales.
 

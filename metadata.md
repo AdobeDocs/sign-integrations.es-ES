@@ -6,7 +6,7 @@ mini-toc-levels: 2
 git-repo: https://github.com/AdobeDocs/sign-integrations.es-ES
 source-git-commit: b1d3ed10cf449ebe50ad65e04bf90ab46fc90dd7
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '130'
 ht-degree: 0%
 
 ---

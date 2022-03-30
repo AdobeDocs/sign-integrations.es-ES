@@ -296,9 +296,9 @@ Para implementar el *Acuerdos* y el subseparador *Send for Signature* para los t
 1. En la página Implementación de script, haga lo siguiente:
 
    * Desde el *Se aplica a* , seleccione el tipo de registro.
-   * Optionally, enter script deployment ID.
+   * Opcionalmente, introduzca el ID de implementación del script.
 
-      Consulte la *Crear un ID de implementación de script personalizado* tema en el [!DNL NetSuite] Centro de ayuda para obtener más información. If you do not enter an ID, one is generated.
+      Consulte la *Crear un ID de implementación de script personalizado* tema en el [!DNL NetSuite] Centro de ayuda para obtener más información. Si no introduce ningún ID, se genera uno.
 
    * Compruebe el **[!UICONTROL Implementado]** casilla de verificación.
 
@@ -449,7 +449,7 @@ Después de instalar un nuevo paquete en un espacio aislado o una cuenta de prod
 
 >[!NOTE]
 >
->The process for creating an agreement differs slightly depending on how it is created. El proceso general implica especificar las opciones del acuerdo, agregar uno o más documentos del acuerdo y especificar los destinatarios. The process described below assumes that you are creating the agreement form a customer record.
+>El proceso de creación de un acuerdo varía ligeramente en función de cómo se cree. El proceso general implica especificar las opciones del acuerdo, agregar uno o más documentos del acuerdo y especificar los destinatarios. El proceso que se describe a continuación presupone que está creando el acuerdo a partir de un registro de cliente.
 
 1. Seleccione o cree un registro de cliente desde el que desee enviar un acuerdo o puede seleccionar otro [!DNL NetSuite] tipo de registro que tiene habilitada la ficha Acuerdos.
 
@@ -464,7 +464,7 @@ Después de instalar un nuevo paquete en un espacio aislado o una cuenta de prod
 
 1. Especifique las opciones del acuerdo de la siguiente manera:
 
-   * **Agreement Name** — Enter a name for the agreement.
+   * **Nombre del acuerdo** : introduzca un nombre para el acuerdo.
    * **Mensaje**-Introduzca un mensaje personalizado para el destinatario.
    * **Tipo de firma** — seleccione el tipo de firma aceptado para el documento. Las opciones son *Firma electrónica* y *Firma de fax*.
 
@@ -495,9 +495,9 @@ Después de instalar un nuevo paquete en un espacio aislado o una cuenta de prod
 
    ![Ficha Documentos](images/documents-tab.png)
 
-1. On the *Documents* sub-tab, attach an existing document from the file cabinet using the *Adobe Sign Document* drop-down, and then select **[!UICONTROL Attach]**.
+1. En la *Documentos* subficha, adjunte un documento existente del archivador utilizando la *Documento de Adobe Sign* y, a continuación, seleccione **[!UICONTROL Adjuntar]**.
 
-   Or, click **[!UICONTROL New Adobe Sign Document]** to access the *[!UICONTROL Adobe Sign Document]* page, and then type the name of a document in your [!DNL NetSuite] file cabinet, select files from your Transaction record (if applicable), or attach a new document.
+   O bien, haga clic en **[!UICONTROL Nuevo documento de Adobe Sign]** para acceder al *[!UICONTROL Documento de Adobe Sign]* y, a continuación, escriba el nombre de un documento en la [!DNL NetSuite] archivador, seleccione archivos de su registro de transacciones (si corresponde) o adjunte un nuevo documento.
 
    Puede añadir varios documentos a un acuerdo.
 
@@ -535,7 +535,7 @@ Una vez que los destinatarios han firmado el documento, el remitente recibe una 
 
 Adobe Sign se integra directamente con Presupuestos en [!DNL NetSuite] para que un PDF del presupuesto se genere automáticamente y se adjunte al registro del acuerdo.
 
-Al visualizar un presupuesto, seleccione **[!UICONTROL Send for Signature]**. Genera y muestra la oferta adjunta al acuerdo. You can also add the *Send for Signature* button to other transaction record types. Consulte [Objetos y tipos de registro](#objects) para obtener más información.
+Al visualizar un presupuesto, seleccione **[!UICONTROL Send for Signature]**. Genera y muestra la oferta adjunta al acuerdo. También puede añadir el *Send for Signature* para otros tipos de registro de transacciones. Consulte [Objetos y tipos de registro](#objects) para obtener más información.
 
 ![Presupuesto - Send for Signature](images/quote-send-forsignature.png)
 
@@ -543,8 +543,8 @@ Al visualizar un presupuesto, seleccione **[!UICONTROL Send for Signature]**. Ge
 
 Después de enviar un acuerdo:
 
-* The document status changes to *Out for Signature* in the Agreement details section
-* The *Send for Signature* button is replaced by the following three buttons:
+* El estado del documento cambia a *Enviado para firmar* en la sección Detalles del acuerdo
+* La *Send for Signature* se sustituye por los tres botones siguientes:
 
    * **Actualizar estado** — Para actualizar manualmente el estado si no se han configurado actualizaciones de estado. Consulte [Configuración de actualizaciones de estado automáticas](#asu) para obtener más información.
    * **Enviar recordatorio** : para enviar un recordatorio al firmante actual.
@@ -600,7 +600,7 @@ Es posible que aparezca el mensaje &quot;El token de acceso proporcionado no es 
 
 Esto puede ocurrir por las siguientes razones:
 
-* The [!DNL NetSuite]/Adobe Sign administrator who configured OAuth has revoked the access token
+* La [!DNL NetSuite]El administrador de Adobe Sign que configuró OAuth ha revocado el token de acceso
 * El token de acceso ha caducado porque no se ha enviado ningún acuerdo desde [!DNL NetSuite] en los últimos 60 días
 * La [!DNL NetSuite]El administrador de Adobe Sign no ha completado correctamente la configuración inicial de OAuth
 
@@ -610,7 +610,7 @@ Para resolver este problema, vuelva a ejecutar el proceso de configuración de O
 
 ### Resolver problemas de estado del documento {#resolvestatus}
 
-If [automatic status updates](#asu) are configured but the agreement status is not updating after sending agreements, try the following:
+Si [actualizaciones de estado automáticas](#asu) están configurados, pero el estado del acuerdo no se actualiza después de enviar acuerdos. Pruebe una de las acciones siguientes:
 
 1. Compruebe el registro de ejecución de la implementación para la *Actualización externa de Adobe Sign* para ver si está recibiendo llamadas de Adobe Sign de la siguiente manera:
 
@@ -639,9 +639,9 @@ También puede ver los registros de ejecución de la implementación de secuenci
 
 1. Vaya a **[!UICONTROL Personalización > Scripts > Scripts]**.
 
-   The *Scripts* list page displays. Si es necesario, utilice los filtros para localizar el script adecuado.
+   La *Scripts* se muestra la página de lista. Si es necesario, utilice los filtros para localizar el script adecuado.
 
-1. Select **[!UICONTROL View]** for the corresponding script.
+1. Seleccionar **[!UICONTROL Ver]** para el script correspondiente.
 
 1. Seleccione la **[!UICONTROL Registro de ejecución]** en la página para mostrar el registro de script.
 
