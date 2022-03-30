@@ -9,7 +9,7 @@ solution: Acrobat Sign, Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 39a43637-af3f-432e-a784-8f472aa86df5
-source-git-commit: 1eafeb73f7b7055fa958b15a02148898f7c9d406
+source-git-commit: 2c2d7ebe427166222cc62c5ab8f867275a97cce9
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Integración de Adobe Acrobat Sign con [!DNL Veeva Vault] agiliza y agiliza tus 
 
 * Ahorra tiempo y recursos empleados en correos electrónicos, noches o faxes.
 * Envía contratos para su firma electrónica o aprobación desde [!DNL Veeva Vault], acceder al historial de contratos en tiempo real y ver los contratos guardados.
-* Realiza un seguimiento de los acuerdos en tiempo real en toda tu organización y obtén actualizaciones cuando se visualicen, firmen, cancelen o rechacen acuerdos.
+* Realiza el seguimiento de los acuerdos en tiempo real en toda tu organización y obtén actualizaciones cuando se visualicen, firmen, cancelen o rechacen acuerdos.
 * eSign en más de 20 idiomas y admite el servicio de fax en más de 50 configuraciones regionales de todo el mundo.
 * Crear plantillas de acuerdo reutilizables para las opciones de envío.
 
@@ -56,7 +56,7 @@ Para enviar un acuerdo con Adobe Acrobat Sign para Veeva:
 
    ![](images/choose-document-type.png)
 
-1. Seleccionar **[!UICONTROL Ok]** para cerrar el cuadro de diálogo.
+1. Para cerrar el cuadro de diálogo, seleccione **[!UICONTROL Ok]**.
 
 1. Seleccionar **[!UICONTROL Siguiente]**.
 
@@ -117,7 +117,7 @@ Para enviar un acuerdo con Adobe Acrobat Sign para Veeva:
 
 1. Una vez que se capturan todas las firmas y se completan en Adobe Acrobat Sign, el estado del documento en Vault cambia a [!UICONTROL Approved].
 
-1. Seleccionar **[!UICONTROL Archivos de documento]** y expanda la **[!UICONTROL Representaciones]** en Vault. Crea automáticamente una nueva copia denominada &quot;Copia de Adobe Sign&quot; una vez que el documento se encuentra en el estado Aprobado.
+1. Seleccionar **[!UICONTROL Archivos de documento]** y expanda la **[!UICONTROL Representaciones]** en Vault. Crea automáticamente una copia denominada &quot;Adobe Sign Rendition&quot; una vez que el documento se encuentra en el estado Aprobado.
 
    ![](images/document-files.png)
 

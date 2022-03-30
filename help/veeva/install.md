@@ -10,9 +10,9 @@ solution: Acrobat Sign, Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 1eafeb73f7b7055fa958b15a02148898f7c9d406
+source-git-commit: 2c2d7ebe427166222cc62c5ab8f867275a97cce9
 workflow-type: tm+mt
-source-wordcount: '3573'
+source-wordcount: '3568'
 ht-degree: 2%
 
 ---
@@ -42,7 +42,7 @@ Los pasos de alto nivel para completar la integración son:
 
 ## Configure [!DNL Veeva Vault] {#configure-veeva}
 
-Para configurar [!DNL Veeva Vault] para la integración con Adobe Acrobat Sign, debe implementar los pasos que se indican a continuación.
+Para configurar [!DNL Veeva Vault] Para la integración con Adobe Acrobat Sign, debe implementar los pasos que se indican a continuación.
 
 ### Paso 1. Crear grupo {#create-group}
 
@@ -247,7 +247,7 @@ Para configurar los campos del documento:
    ![Imagen](images/create-display-section.png)
 
 1. Para los dos campos de documento compartidos (signature__c y allow_adobe_sign_user_actions__c), actualice la sección de interfaz de usuario con **[!UICONTROL Firma de Adobe]** como etiqueta de sección.
-1. Agregue los tres campos compartidos a todos los tipos de documento que sean elegibles para Adobe Acrobat Signature. Para ello, en la página Documento base, seleccione **[!UICONTROL Añadir]** > **[!UICONTROL Campo compartido existente]** desde la esquina superior derecha.
+1. Agregue los tres campos compartidos a todos los tipos de documento que sean elegibles para Adobe Acrobat Signature. Para ello, en la página Documento base, seleccione **[!UICONTROL Añadir]** > **[!UICONTROL Campo compartido existente]** en la esquina superior derecha.
 
    ![Imagen](images/create-document-fields.png)
 
@@ -255,7 +255,7 @@ Para configurar los campos del documento:
 
    ![Imagen](images/use-shared-fields.png)
 
-1. Tenga en cuenta que ambos campos deben tener una seguridad específica que solo permita a los miembros del grupo de administración de Adobe Sign actualizar sus valores.
+1. Ambos campos deben tener una seguridad específica que solo permita a los miembros del grupo de administración de Adobe Sign actualizar sus valores.
 
    ![Imagen](images/security-overrides.png)
 
