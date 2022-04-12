@@ -10,7 +10,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 1026d696587b898b6e1132ca1a69642d799dcf1d
+source-git-commit: c6c0257204ab45776450f77a5a95291a99371063
 workflow-type: tm+mt
 source-wordcount: '3909'
 ht-degree: 3%
@@ -102,7 +102,7 @@ El objeto de firmante se crea para almacenar información relacionada con los pa
 
 | Campo | Etiqueta | Tipo | Descripción |
 | --- | --- | ---| --- | 
-| email__c | Dirección de correo electrónico | Cadena (120) | Contiene el ID de acuerdo único de Adobe Acrobat Sign |
+| email__c | Dirección de correo electrónico | Cadena (120) | Contiene el ID exclusivo del acuerdo de Adobe Acrobat Sign |
 | external_id__c | ID de participante | Cadena (80) | Contiene el identificador único de participante de Adobe Acrobat Sign |
 | name__v | Nombre | Cadena (128) | Contiene el nombre del participante de Adobe Acrobat Sign |
 | order__c | Ordenar | Número | Conserva el número de pedido del participante del acuerdo de Adobe Acrobat Sign |
@@ -121,14 +121,14 @@ Campos de objeto de evento de firma
 
 | Campo | Etiqueta | Tipo | Descripción |
 | --- | --- | ---| --- | 
-| acting_user_email__c | Correo electrónico del usuario activo | Cadena | Contiene el correo electrónico del usuario de Adobe Acrobat Sign que realizó la acción que provocó el evento |
+| acting_user_email__c | Correo electrónico del usuario activo | Cadena | Contiene el correo electrónico del usuario de Adobe Acrobat Sign que realizó la acción que provocó el evento que se generó |
 | acting_user_name__c | Nombre de usuario interino | Cadena | Contiene el nombre del usuario de Adobe Acrobat Sign que realizó la acción que provocó el evento |
 | description__c | Descripción | Cadena | Contiene la descripción del evento de Adobe Acrobat Sign |
-| event_date__c | Fecha del evento | FechaHora | Contiene la fecha y la hora del evento de Adobe Acrobat Sign |
-| event_type__c | Tipo de evento | Cadena | Mantiene el tipo del evento de Adobe Acrobat Sign |
+| event_date__c | Fecha del evento | FechaHora | Celebra la fecha y hora del evento de Adobe Acrobat Sign |
+| event_type__c | Tipo de evento | Cadena | Realiza el tipo de evento de Adobe Acrobat Sign |
 | name__v | Nombre | Cadena | Nombre del evento generado automáticamente |
 | participant_comment__c | Comentario del participante | Cadena | Contiene el comentario del participante de Adobe Acrobat Sign, si lo hubiera |
-| participant_email__c | Correo electrónico del participante | Cadena | Contiene el correo electrónico del participante de Adobe Acrobat Sign |
+| participant_email__c | Correo electrónico del participante | Cadena | Contiene el correo electrónico del participante de Adobe Acrobat Sign. |
 | participant_role__c | Función de participante | Cadena | Tiene la función de participante en Adobe Acrobat Sign |
 | signature__c | Firma | Objeto (firma) | Contiene la referencia al registro principal de la firma |
 | external_id__c | ID externo | Texto (200) | Contiene el identificador de evento del acuerdo generado por Adobe Sign. |
@@ -150,11 +150,11 @@ AgreementsEventsProcessingJob: Esta tarea garantiza que todos los documentos con
 Campos de objeto del registro de tareas de integración de Adobe Sign
 
 | Campo | Etiqueta | Tipo | Descripción |
-|---|---|---|---| 
+|:--|:--|:--|:---------| 
 | start_date__c | Fecha de inicio | FechaHora | Fecha de inicio de tarea |
 | end_date__c | Fecha finalización | FechaHora | Fecha de finalización de tarea |
-| task_status__c | Estado de tarea | Lista de selección | Mantiene el estado de la tarea: Completado (task_completed__c) Completado con errores (task_completed_with_errors__c) Error (task_failed__c) |
-| task_type__c | Tipo de tarea | Lista de selección | Tipo de tarea de retención: Eventos del acuerdo Sincronización (agreements_events_sync__c) Eventos del acuerdo Procesamiento (agreements_events_processing__c) |
+| task_status__c | Estado de tarea | Lista de selección | Mantiene el estado de la tarea: <br><br> Completado (task_completed__c) <br><br> Completado con errores (task_completed_with_errors__c) <br><br> Error (task_failed__c) |
+| task_type__c | Tipo de tarea | Lista de selección | Tipo de tarea de retención: <br><br> Sincronización de eventos de acuerdos (agreements_events_sync__c) <br><br> Procesamiento de eventos del acuerdo (agreements_events_processing__c) |
 | messages__c | Mensaje | Largo (32000) | Retener mensaje de tarea |
 
 ![Imagen de detalles del objeto del registro de tareas](images/task-log.png)
@@ -235,7 +235,7 @@ Al implementar el paquete de Adobe Acrobat Sign, se crea un registro de grupo de
 
 ![Imagen de grupos de tipos de documento](images/document-type-groups.png)
 
-Debe agregar este grupo de tipos de documento para todas las clasificaciones de documentos que sean aptas para el proceso de Adobe Acrobat Sign. Dado que la propiedad de grupo de tipos de documento no se hereda de tipo a subtipo ni de subtipo a nivel de clasificación, debe establecerse para cada clasificación de documento elegible para Adobe Acrobat Sign.
+Debe agregar este grupo de tipos de documento para todas las clasificaciones de documentos que sean aptas para el proceso de Adobe Acrobat Sign. Como la propiedad de grupo de tipo de documento no se hereda de tipo a subtipo ni de subtipo a nivel de clasificación, debe establecerse para cada clasificación de documento elegible para Adobe Acrobat Sign.
 
 ![Imagen de los detalles de edición del documento](images/document-edit-details.png)
 
@@ -247,7 +247,7 @@ Debe agregar este grupo de tipos de documento para todas las clasificaciones de 
 
 ### Paso 6. Crear configuración de funciones de usuario {#create-user-role-setup}
 
-Una vez que los ciclos de vida se hayan configurado correctamente, el sistema debe asegurarse de que DAC añade el usuario Administrador de Adobe Sign para todos los documentos que sean aptos para el proceso de Adobe Acrobat Sign. Para ello, cree el registro de configuración de funciones de usuario adecuado que especifique:
+Una vez que los ciclos de vida se hayan configurado correctamente, el sistema debe asegurarse de que DAC añade el usuario administrador de Adobe Sign a todos los documentos que cumplen los requisitos para el proceso de Adobe Acrobat Sign. Para ello, cree el registro de configuración de funciones de usuario adecuado que especifique:
 
 * Grupo de tipos de documento como documento de Adobe Sign
 * Función de aplicación como función de administrador de Adobe Sign
@@ -400,7 +400,7 @@ Para actualizar el ciclo de vida del documento, siga estos pasos:
 
       ![Imagen](images/adobe-sing-authoring.png)
 
-   * **En la firma de Adobe**: Es un nombre de marcador de posición para el estado que indica que el documento se ha cargado en Adobe Acrobat Sign y que su acuerdo ya se ha enviado a los participantes (estado OUT_FOR_SIGNATURE o OUT_FOR_APPROVAL). Es un estado obligatorio. Este estado debe tener definidas las siguientes cinco acciones de usuario:
+   * **En la firma de Adobe**: Es un nombre de marcador de posición para el estado que indica que el documento está cargado en Adobe Acrobat Sign y que su acuerdo ya se ha enviado a los participantes (estado OUT_FOR_SIGNATURE o OUT_FOR_APPROVAL). Es un estado obligatorio. Este estado debe tener definidas las siguientes cinco acciones de usuario:
 
       * Acción que cambia el estado del documento a estado Cancelado de Adobe Sign. El estado de destino de esta acción puede ser cualquiera que sea el requisito del cliente y puede ser diferente para diferentes tipos. El nombre de esta acción de usuario debe ser el mismo para todos los tipos de documento, independientemente del ciclo de vida.
       * Acción que cambia el estado del documento a Rechazado de Adobe Sign. El estado de destino de esta acción puede ser cualquiera que sea el requisito del cliente y puede ser diferente para diferentes tipos. El nombre de esta acción de usuario debe ser el mismo para todos los tipos de documento, independientemente del ciclo de vida.
@@ -418,7 +418,7 @@ Para actualizar el ciclo de vida del documento, siga estos pasos:
       * **Adobe firmado (aprobado)**: Es un nombre de marcador de posición para el estado que indica que el documento se ha cargado en Adobe Acrobat Sign y que su acuerdo se ha completado (estado FIRMADO o APROBADO). Es un estado obligatorio y puede ser un estado de ciclo de vida existente, como Aprobado.
 Este estado no requiere acciones del usuario. Debe tener una seguridad que permita a la función de administrador de Adobe Sign: ver documentos, ver contenido y editar campos.
 
-   El siguiente diagrama ilustra las asignaciones entre los estados del acuerdo de Adobe Acrobat Sign y del documento de Vault, donde el estado &quot;Antes de la firma del Adobe&quot; es Borrador.
+   El siguiente diagrama ilustra las asignaciones entre el acuerdo de Adobe Acrobat Sign y los estados del documento de Vault, donde el estado &quot;Antes de la firma del Adobe&quot; es Borrador.
 
    ![Imagen](images/sign-vault-mappings.png)
 
@@ -494,7 +494,7 @@ Un administrador de cuentas de Adobe Acrobat Sign debe seguir los pasos que se i
 
    ![Imagen](images/allow-auto-provisioning.png)
 
-1. Para configurar Adobe Sign Rendition para que se muestre en Veeva en lugar de Original Rendition, seleccione la casilla de verificación **[!UICONTROL Mostrar la representación de Acrobat Sign]**.
+1. Para configurar Adobe Sign Rendition para que se muestre en Veeva en lugar de Original Rendition, seleccione la casilla de verificación **[!UICONTROL Mostrar representación de Acrobat Sign]**.
 
    ![Imagen](images/edit-connection-dispplay-adobe-sign-rendition.png)
 
