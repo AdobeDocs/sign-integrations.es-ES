@@ -10,7 +10,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: aa8f965e516bacda8b4172d256da4700d479eab8
+source-git-commit: 1026d696587b898b6e1132ca1a69642d799dcf1d
 workflow-type: tm+mt
 source-wordcount: '3909'
 ht-degree: 3%
@@ -92,7 +92,6 @@ El objeto de firma se crea para almacenar información relacionada con el acuerd
 | plugin_version__c | Versión del complemento | Texto (10) | Se utiliza para permitir el procesamiento adecuado de todos los acuerdos creados antes de implementar una nueva versión 4.0. Nota: Después de implementar la versión 4.0 de la aplicación web personalizada, este campo se establecerá en 4.0 cada vez que se cree un registro de firma. |
 | external_environment__c | Entorno externo | Texto (20) | Contiene el nombre del entorno de Adobe Sign en el que se ha creado el acuerdo. |
 
-
 ![Imagen de detalles del objeto de firma](images/signature-object-details.png)
 
 #### Objeto Signatory {#signatory-object}
@@ -122,7 +121,7 @@ Campos de objeto de evento de firma
 
 | Campo | Etiqueta | Tipo | Descripción |
 | --- | --- | ---| --- | 
-| acting_user_email__c | Correo electrónico del usuario activo | Cadena | Contiene el correo electrónico del usuario de Adobe Acrobat Sign que realizó la acción que provocó el evento que se generó |
+| acting_user_email__c | Correo electrónico del usuario activo | Cadena | Contiene el correo electrónico del usuario de Adobe Acrobat Sign que realizó la acción que provocó el evento |
 | acting_user_name__c | Nombre de usuario interino | Cadena | Contiene el nombre del usuario de Adobe Acrobat Sign que realizó la acción que provocó el evento |
 | description__c | Descripción | Cadena | Contiene la descripción del evento de Adobe Acrobat Sign |
 | event_date__c | Fecha del evento | FechaHora | Contiene la fecha y la hora del evento de Adobe Acrobat Sign |
@@ -130,7 +129,7 @@ Campos de objeto de evento de firma
 | name__v | Nombre | Cadena | Nombre del evento generado automáticamente |
 | participant_comment__c | Comentario del participante | Cadena | Contiene el comentario del participante de Adobe Acrobat Sign, si lo hubiera |
 | participant_email__c | Correo electrónico del participante | Cadena | Contiene el correo electrónico del participante de Adobe Acrobat Sign |
-| participant_role__c | Función de participante | Cadena | Mantiene la función del participante de Adobe Acrobat Sign |
+| participant_role__c | Función de participante | Cadena | Tiene la función de participante en Adobe Acrobat Sign |
 | signature__c | Firma | Objeto (firma) | Contiene la referencia al registro principal de la firma |
 | external_id__c | ID externo | Texto (200) | Contiene el identificador de evento del acuerdo generado por Adobe Sign. |
 
@@ -151,7 +150,7 @@ AgreementsEventsProcessingJob: Esta tarea garantiza que todos los documentos con
 Campos de objeto del registro de tareas de integración de Adobe Sign
 
 | Campo | Etiqueta | Tipo | Descripción |
-| --- | --- | ---| --- | 
+|---|---|---|---| 
 | start_date__c | Fecha de inicio | FechaHora | Fecha de inicio de tarea |
 | end_date__c | Fecha finalización | FechaHora | Fecha de finalización de tarea |
 | task_status__c | Estado de tarea | Lista de selección | Mantiene el estado de la tarea: Completado (task_completed__c) Completado con errores (task_completed_with_errors__c) Error (task_failed__c) |
@@ -419,7 +418,7 @@ Para actualizar el ciclo de vida del documento, siga estos pasos:
       * **Adobe firmado (aprobado)**: Es un nombre de marcador de posición para el estado que indica que el documento se ha cargado en Adobe Acrobat Sign y que su acuerdo se ha completado (estado FIRMADO o APROBADO). Es un estado obligatorio y puede ser un estado de ciclo de vida existente, como Aprobado.
 Este estado no requiere acciones del usuario. Debe tener una seguridad que permita a la función de administrador de Adobe Sign: ver documentos, ver contenido y editar campos.
 
-   El siguiente diagrama ilustra las asignaciones entre el acuerdo de Adobe Acrobat Sign y los estados del documento de Vault, donde el estado &quot;Antes de la firma del Adobe&quot; es Borrador.
+   El siguiente diagrama ilustra las asignaciones entre los estados del acuerdo de Adobe Acrobat Sign y del documento de Vault, donde el estado &quot;Antes de la firma del Adobe&quot; es Borrador.
 
    ![Imagen](images/sign-vault-mappings.png)
 
@@ -446,7 +445,7 @@ Debe establecer los permisos adecuados para cada función de usuario en el estad
 Tras completar la configuración de [!DNL Veeva Vault] y la cuenta de administrador de Adobe Acrobat Sign, el administrador debe crear una conexión entre las dos cuentas mediante el middleware. La [!DNL Veeva Vault] y la conexión de la cuenta de Adobe Acrobat Sign la inicia Adobe Acrobat Sign Identity y, a continuación, se utiliza para almacenar el[!DNL Veeva Vault] identidad.
 Para la seguridad y estabilidad del sistema, el administrador debe utilizar un [!DNL Veeva Vault] sistema/servicio/cuenta de utilidad, como `adobe.for.veeva@xyz.com`, en lugar de una cuenta de usuario personal, como `bob.smith@xyz.com`.
 
-Un administrador de cuentas de Adobe Acrobat Sign debe seguir los pasos que se indican a continuación para conectarse [!DNL Veeva Vault] a Adobe Acrobat Sign con middleware:
+Un administrador de cuentas de Adobe Acrobat Sign debe seguir los pasos que se indican a continuación para conectarse [!DNL Veeva Vault] a Adobe Acrobat Sign mediante middleware:
 
 1. Vaya a la [Adobe Acrobat Sign para [!DNL Veeva Vault] Página de inicio](https://static.adobesigncdn.com/veevavaultintsvc/index.html).
 1. Seleccionar **[!UICONTROL Inicio de sesión]** en la esquina superior derecha.
