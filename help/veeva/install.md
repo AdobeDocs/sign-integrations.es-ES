@@ -10,7 +10,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: c6c0257204ab45776450f77a5a95291a99371063
+source-git-commit: 5481293e84bd72e09df2c2f4b5ce27c5fdea28d0
 workflow-type: tm+mt
 source-wordcount: '3909'
 ht-degree: 3%
@@ -30,7 +30,7 @@ Los pasos de alto nivel para completar la integración son:
 * Active su cuenta administrativa en Adobe Acrobat Sign (solo nuevos clientes).
 * Cree objetos para realizar un seguimiento del historial de un ciclo de vida de acuerdo en Vault.
 * Cree un nuevo perfil de seguridad.
-* Configurar un grupo en Adobe Acrobat Sign para que contenga la [!DNL Veeva Vault] usuario de integración.
+* Configurar un grupo en Adobe Acrobat Sign para mantener el [!DNL Veeva Vault] usuario de integración.
 * Cree copias y campos de documento.
 * Configure acciones web y actualice el ciclo de vida del documento.
 * Crear configuración de usuario y rol de usuario de tipo de documento.
@@ -78,7 +78,7 @@ El objeto de firma se crea para almacenar información relacionada con el acuerd
 **Campos de objeto de firma**
 
 | Campo | Etiqueta | Tipo | Descripción |
-| --- | --- | ---| --- | 
+|:---|:---|:---|:------- | 
 | external_id__c | ID del acuerdo | Cadena (100) | Contiene el ID de acuerdo único de Adobe Acrobat Sign |
 | file_hash__c | Hash de archivo | Cadena (50) | Contiene la suma de comprobación md5 del archivo enviado a Adobe Acrobat Sign |
 | name__v | Nombre | Cadena (128) | Contiene el nombre del acuerdo |
@@ -101,7 +101,7 @@ El objeto de firmante se crea para almacenar información relacionada con los pa
 **Campos de objeto firmante**
 
 | Campo | Etiqueta | Tipo | Descripción |
-| --- | --- | ---| --- | 
+|:---|:---|:---|:------- | 
 | email__c | Dirección de correo electrónico | Cadena (120) | Contiene el ID exclusivo del acuerdo de Adobe Acrobat Sign |
 | external_id__c | ID de participante | Cadena (80) | Contiene el identificador único de participante de Adobe Acrobat Sign |
 | name__v | Nombre | Cadena (128) | Contiene el nombre del participante de Adobe Acrobat Sign |
@@ -120,8 +120,8 @@ El objeto Evento de firma se crea para almacenar la información relacionada con
 Campos de objeto de evento de firma
 
 | Campo | Etiqueta | Tipo | Descripción |
-| --- | --- | ---| --- | 
-| acting_user_email__c | Correo electrónico del usuario activo | Cadena | Contiene el correo electrónico del usuario de Adobe Acrobat Sign que realizó la acción que provocó el evento que se generó |
+|:---|:---|:---|:-------- | 
+| acting_user_email__c | Correo electrónico del usuario activo | Cadena | Contiene el correo electrónico del usuario de Adobe Acrobat Sign que realizó la acción que provocó el evento |
 | acting_user_name__c | Nombre de usuario interino | Cadena | Contiene el nombre del usuario de Adobe Acrobat Sign que realizó la acción que provocó el evento |
 | description__c | Descripción | Cadena | Contiene la descripción del evento de Adobe Acrobat Sign |
 | event_date__c | Fecha del evento | FechaHora | Celebra la fecha y hora del evento de Adobe Acrobat Sign |
@@ -153,8 +153,8 @@ Campos de objeto del registro de tareas de integración de Adobe Sign
 |:--|:--|:--|:---------| 
 | start_date__c | Fecha de inicio | FechaHora | Fecha de inicio de tarea |
 | end_date__c | Fecha finalización | FechaHora | Fecha de finalización de tarea |
-| task_status__c | Estado de tarea | Lista de selección | Mantiene el estado de la tarea: <br><br> Completado (task_completed__c) <br><br> Completado con errores (task_completed_with_errors__c) <br><br> Error (task_failed__c) |
-| task_type__c | Tipo de tarea | Lista de selección | Tipo de tarea de retención: <br><br> Sincronización de eventos de acuerdos (agreements_events_sync__c) <br><br> Procesamiento de eventos del acuerdo (agreements_events_processing__c) |
+| task_status__c | Estado de tarea | Lista de selección | Mantiene el estado de la tarea: <br><br> Completado (task_completed__c) Completado con errores (task_completed_with_errors__c) Error (task_failed__c) |
+| task_type__c | Tipo de tarea | Lista de selección | Tipo de tarea de retención: <br><br> Eventos del acuerdo Sincronización (agreements_events_sync__c) Eventos del acuerdo Procesamiento (agreements_events_processing__c) |
 | messages__c | Mensaje | Largo (32000) | Retener mensaje de tarea |
 
 ![Imagen de detalles del objeto del registro de tareas](images/task-log.png)
@@ -235,7 +235,7 @@ Al implementar el paquete de Adobe Acrobat Sign, se crea un registro de grupo de
 
 ![Imagen de grupos de tipos de documento](images/document-type-groups.png)
 
-Debe agregar este grupo de tipos de documento para todas las clasificaciones de documentos que sean aptas para el proceso de Adobe Acrobat Sign. Como la propiedad de grupo de tipo de documento no se hereda de tipo a subtipo ni de subtipo a nivel de clasificación, debe establecerse para cada clasificación de documento elegible para Adobe Acrobat Sign.
+Debe añadir este grupo de tipos de documento para todas las clasificaciones de documentos que sean aptas para el proceso de Adobe Acrobat Sign. Dado que la propiedad de grupo de tipos de documento no se hereda de tipo a subtipo ni de subtipo a nivel de clasificación, debe establecerse para cada clasificación de documento elegible para Adobe Acrobat Sign.
 
 ![Imagen de los detalles de edición del documento](images/document-edit-details.png)
 
@@ -247,7 +247,7 @@ Debe agregar este grupo de tipos de documento para todas las clasificaciones de 
 
 ### Paso 6. Crear configuración de funciones de usuario {#create-user-role-setup}
 
-Una vez que los ciclos de vida se hayan configurado correctamente, el sistema debe asegurarse de que DAC añade el usuario administrador de Adobe Sign a todos los documentos que cumplen los requisitos para el proceso de Adobe Acrobat Sign. Para ello, cree el registro de configuración de funciones de usuario adecuado que especifique:
+Una vez que los ciclos de vida se hayan configurado correctamente, el sistema debe asegurarse de que DAC añade el usuario Administrador de Adobe Sign para todos los documentos que sean aptos para el proceso de Adobe Acrobat Sign. Para ello, cree el registro de configuración de funciones de usuario adecuado que especifique:
 
 * Grupo de tipos de documento como documento de Adobe Sign
 * Función de aplicación como función de administrador de Adobe Sign
@@ -418,7 +418,7 @@ Para actualizar el ciclo de vida del documento, siga estos pasos:
       * **Adobe firmado (aprobado)**: Es un nombre de marcador de posición para el estado que indica que el documento se ha cargado en Adobe Acrobat Sign y que su acuerdo se ha completado (estado FIRMADO o APROBADO). Es un estado obligatorio y puede ser un estado de ciclo de vida existente, como Aprobado.
 Este estado no requiere acciones del usuario. Debe tener una seguridad que permita a la función de administrador de Adobe Sign: ver documentos, ver contenido y editar campos.
 
-   El siguiente diagrama ilustra las asignaciones entre el acuerdo de Adobe Acrobat Sign y los estados del documento de Vault, donde el estado &quot;Antes de la firma del Adobe&quot; es Borrador.
+   El siguiente diagrama ilustra las asignaciones entre los estados del acuerdo de Adobe Acrobat Sign y del documento de Vault, donde el estado &quot;Antes de la firma del Adobe&quot; es Borrador.
 
    ![Imagen](images/sign-vault-mappings.png)
 
@@ -445,7 +445,7 @@ Debe establecer los permisos adecuados para cada función de usuario en el estad
 Tras completar la configuración de [!DNL Veeva Vault] y la cuenta de administrador de Adobe Acrobat Sign, el administrador debe crear una conexión entre las dos cuentas mediante el middleware. La [!DNL Veeva Vault] y la conexión de la cuenta de Adobe Acrobat Sign la inicia Adobe Acrobat Sign Identity y, a continuación, se utiliza para almacenar el[!DNL Veeva Vault] identidad.
 Para la seguridad y estabilidad del sistema, el administrador debe utilizar un [!DNL Veeva Vault] sistema/servicio/cuenta de utilidad, como `adobe.for.veeva@xyz.com`, en lugar de una cuenta de usuario personal, como `bob.smith@xyz.com`.
 
-Un administrador de cuentas de Adobe Acrobat Sign debe seguir los pasos que se indican a continuación para conectarse [!DNL Veeva Vault] a Adobe Acrobat Sign mediante middleware:
+Un administrador de cuentas de Adobe Acrobat Sign debe seguir los pasos que se indican a continuación para conectarse [!DNL Veeva Vault] a Adobe Acrobat Sign con middleware:
 
 1. Vaya a la [Adobe Acrobat Sign para [!DNL Veeva Vault] Página de inicio](https://static.adobesigncdn.com/veevavaultintsvc/index.html).
 1. Seleccionar **[!UICONTROL Inicio de sesión]** en la esquina superior derecha.
@@ -494,7 +494,7 @@ Un administrador de cuentas de Adobe Acrobat Sign debe seguir los pasos que se i
 
    ![Imagen](images/allow-auto-provisioning.png)
 
-1. Para configurar Adobe Sign Rendition para que se muestre en Veeva en lugar de Original Rendition, seleccione la casilla de verificación **[!UICONTROL Mostrar representación de Acrobat Sign]**.
+1. Para configurar Adobe Sign Rendition para que se muestre en Veeva en lugar de Original Rendition, seleccione la casilla de verificación **[!UICONTROL Mostrar la representación de Acrobat Sign]**.
 
    ![Imagen](images/edit-connection-dispplay-adobe-sign-rendition.png)
 
