@@ -10,7 +10,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 5481293e84bd72e09df2c2f4b5ce27c5fdea28d0
+source-git-commit: 6b06bb8562ea7464fdbc23a25a4be3572eccdd1e
 workflow-type: tm+mt
 source-wordcount: '3909'
 ht-degree: 3%
@@ -30,7 +30,7 @@ Los pasos de alto nivel para completar la integración son:
 * Active su cuenta administrativa en Adobe Acrobat Sign (solo nuevos clientes).
 * Cree objetos para realizar un seguimiento del historial de un ciclo de vida de acuerdo en Vault.
 * Cree un nuevo perfil de seguridad.
-* Configurar un grupo en Adobe Acrobat Sign para mantener el [!DNL Veeva Vault] usuario de integración.
+* Configurar un grupo en Adobe Acrobat Sign para que contenga la [!DNL Veeva Vault] usuario de integración.
 * Cree copias y campos de documento.
 * Configure acciones web y actualice el ciclo de vida del documento.
 * Crear configuración de usuario y rol de usuario de tipo de documento.
@@ -77,7 +77,7 @@ El objeto de firma se crea para almacenar información relacionada con el acuerd
 
 **Campos de objeto de firma**
 
-| Campo | Etiqueta | Tipo | Descripción |
+| Campo | Etiqueta | Tipo | Descripción         |
 |:---|:---|:---|:------- | 
 | external_id__c | ID del acuerdo | Cadena (100) | Contiene el ID de acuerdo único de Adobe Acrobat Sign |
 | file_hash__c | Hash de archivo | Cadena (50) | Contiene la suma de comprobación md5 del archivo enviado a Adobe Acrobat Sign |
@@ -102,8 +102,8 @@ El objeto de firmante se crea para almacenar información relacionada con los pa
 
 | Campo | Etiqueta | Tipo | Descripción |
 |:---|:---|:---|:------- | 
-| email__c | Dirección de correo electrónico | Cadena (120) | Contiene el ID exclusivo del acuerdo de Adobe Acrobat Sign |
-| external_id__c | ID de participante | Cadena (80) | Contiene el identificador único de participante de Adobe Acrobat Sign |
+| email__c | Dirección de correo electrónico | Cadena (120) | Contiene el ID de acuerdo único de Adobe Acrobat Sign |
+| external_id__c | ID de participante | Cadena (80) | Contiene el identificador único del participante de Adobe Acrobat Sign |
 | name__v | Nombre | Cadena (128) | Contiene el nombre del participante de Adobe Acrobat Sign |
 | order__c | Ordenar | Número | Conserva el número de pedido del participante del acuerdo de Adobe Acrobat Sign |
 | role_c | Función | Cadena (30) | Mantiene la función del participante del acuerdo de Adobe Acrobat Sign |
@@ -125,11 +125,11 @@ Campos de objeto de evento de firma
 | acting_user_name__c | Nombre de usuario interino | Cadena | Contiene el nombre del usuario de Adobe Acrobat Sign que realizó la acción que provocó el evento |
 | description__c | Descripción | Cadena | Contiene la descripción del evento de Adobe Acrobat Sign |
 | event_date__c | Fecha del evento | FechaHora | Celebra la fecha y hora del evento de Adobe Acrobat Sign |
-| event_type__c | Tipo de evento | Cadena | Realiza el tipo de evento de Adobe Acrobat Sign |
+| event_type__c | Tipo de evento | Cadena | Mantiene el tipo del evento de Adobe Acrobat Sign |
 | name__v | Nombre | Cadena | Nombre del evento generado automáticamente |
 | participant_comment__c | Comentario del participante | Cadena | Contiene el comentario del participante de Adobe Acrobat Sign, si lo hubiera |
 | participant_email__c | Correo electrónico del participante | Cadena | Contiene el correo electrónico del participante de Adobe Acrobat Sign. |
-| participant_role__c | Función de participante | Cadena | Tiene la función de participante en Adobe Acrobat Sign |
+| participant_role__c | Función de participante | Cadena | Mantiene la función del participante de Adobe Acrobat Sign |
 | signature__c | Firma | Objeto (firma) | Contiene la referencia al registro principal de la firma |
 | external_id__c | ID externo | Texto (200) | Contiene el identificador de evento del acuerdo generado por Adobe Sign. |
 
@@ -400,7 +400,7 @@ Para actualizar el ciclo de vida del documento, siga estos pasos:
 
       ![Imagen](images/adobe-sing-authoring.png)
 
-   * **En la firma de Adobe**: Es un nombre de marcador de posición para el estado que indica que el documento está cargado en Adobe Acrobat Sign y que su acuerdo ya se ha enviado a los participantes (estado OUT_FOR_SIGNATURE o OUT_FOR_APPROVAL). Es un estado obligatorio. Este estado debe tener definidas las siguientes cinco acciones de usuario:
+   * **En la firma de Adobe**: Es un nombre de marcador de posición para el estado que indica que el documento se ha cargado en Adobe Acrobat Sign y que su acuerdo ya se ha enviado a los participantes (estado OUT_FOR_SIGNATURE o OUT_FOR_APPROVAL). Es un estado obligatorio. Este estado debe tener definidas las siguientes cinco acciones de usuario:
 
       * Acción que cambia el estado del documento a estado Cancelado de Adobe Sign. El estado de destino de esta acción puede ser cualquiera que sea el requisito del cliente y puede ser diferente para diferentes tipos. El nombre de esta acción de usuario debe ser el mismo para todos los tipos de documento, independientemente del ciclo de vida.
       * Acción que cambia el estado del documento a Rechazado de Adobe Sign. El estado de destino de esta acción puede ser cualquiera que sea el requisito del cliente y puede ser diferente para diferentes tipos. El nombre de esta acción de usuario debe ser el mismo para todos los tipos de documento, independientemente del ciclo de vida.
@@ -490,7 +490,7 @@ Un administrador de cuentas de Adobe Acrobat Sign debe seguir los pasos que se i
 
 1. Para permitir el aprovisionamiento automático de usuarios en Adobe Acrobat Sign, seleccione la casilla de verificación **[!UICONTROL Aprovisionamiento automático de usuarios de Sign]**.
 
-   **Nota:** El aprovisionamiento automático de nuevos usuarios de Adobe Acrobat Sign solo funciona si se ha habilitado en el nivel de cuenta de Adobe Acrobat Sign en Adobe Acrobat Sign, además de habilitar **[!UICONTROL Aprovisionamiento automático de usuarios de Sign]** para el[!DNL Veeva Vault] Integración con Adobe Acrobat Sign como muestra el administrador de cuentas de Adobe Acrobat Sign a continuación.
+   **Nota:** El aprovisionamiento automático de nuevos usuarios de Adobe Acrobat Sign solo funciona si se ha activado en el nivel de cuenta de Adobe Acrobat Sign en Adobe Acrobat Sign además de activar **[!UICONTROL Aprovisionamiento automático de usuarios de Sign]** para el[!DNL Veeva Vault] Integración con Adobe Acrobat Sign como muestra el administrador de cuentas de Adobe Acrobat Sign a continuación.
 
    ![Imagen](images/allow-auto-provisioning.png)
 
