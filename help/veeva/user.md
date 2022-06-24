@@ -9,7 +9,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 39a43637-af3f-432e-a784-8f472aa86df5
-source-git-commit: 076c575d179f576366c1d9a76be0a582154574b1
+source-git-commit: c164692d78608c436d136caef44b19fe8d37b9d8
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 0%
@@ -54,11 +54,12 @@ Para enviar un acuerdo con Adobe Acrobat Sign para Veeva:
 
 1. En el cuadro de diálogo que aparece, seleccione **[!UICONTROL Tipo]** as *[!UICONTROL Clínico]* y, a continuación, seleccione una **[!UICONTROL Subtipo]** y **[!UICONTROL Clasificación]**, si es necesario.
 
+
    ![](images/choose-document-type.png)
 
 1. Para cerrar el cuadro de diálogo, seleccione **[!UICONTROL Ok]**.
 
-1. Seleccionar **[!UICONTROL Siguiente]**.
+1. Seleccione **[!UICONTROL Siguiente]**.
 
 1. En la ventana que aparece, rellene todos los campos obligatorios en la sección de metadatos y seleccione **[!UICONTROL Guardar]**.
 
@@ -100,10 +101,10 @@ Para enviar un acuerdo con Adobe Acrobat Sign para Veeva:
 
    ![](images/iFrame-confirm-email.png)
 
-   Sin embargo, si *Aprovisionamiento automático de usuarios de Sign* La función está desactivada, la creación de usuarios de Adobe Acrobat Sign falla y la ventana de iFrame muestra un mensaje que solicita al usuario que se ponga en contacto con su administrador de cuentas de Adobe Acrobat Sign. El administrador de cuentas de Adobe Acrobat Sign puede realizar una de las siguientes acciones:
+   Sin embargo, si *Aprovisionamiento automático de usuarios de Sign* está desactivada, la creación de usuarios de Adobe Acrobat Sign falla y la ventana de iFrame muestra un mensaje que solicita al usuario que se ponga en contacto con su administrador de cuentas de Adobe Acrobat Sign. El administrador de cuentas de Adobe Acrobat Sign puede realizar una de las siguientes acciones:
 
    * Active la *Aprovisionamiento automático de usuarios de Sign* para la cuenta.
-   * Cree el usuario en Adobe Acrobat Sign antes de utilizar la integración de Adobe Acrobat Sign de Veeva Vault.
+   * Cree el usuario en Adobe Acrobat Sign antes de utilizar la integración de Veeva Vault Adobe Acrobat Sign.
 
    ![](images/iFrame-contact-administrator.png)
 
@@ -115,7 +116,7 @@ Para enviar un acuerdo con Adobe Acrobat Sign para Veeva:
 
    ![](images/in-adobe-signing.png)
 
-1. Una vez que se capturan todas las firmas y se completan en Adobe Acrobat Sign, el estado del documento en Vault cambia a [!UICONTROL Approved].
+1. Una vez que todas las firmas se capturan y se completan en Adobe Acrobat Sign, el estado del documento en Vault cambia a [!UICONTROL Approved].
 
 1. Seleccionar **[!UICONTROL Archivos de documento]** y expanda la **[!UICONTROL Representaciones]** en Vault. Crea automáticamente una copia denominada &quot;Adobe Sign Rendition&quot; una vez que el documento se encuentra en el estado Aprobado.
 
