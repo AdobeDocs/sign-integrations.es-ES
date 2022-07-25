@@ -10,9 +10,9 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: c164692d78608c436d136caef44b19fe8d37b9d8
+source-git-commit: 163c74a2e03aeaa0627d972b791166d4ea4e66a6
 workflow-type: tm+mt
-source-wordcount: '3931'
+source-wordcount: '3933'
 ht-degree: 3%
 
 ---
@@ -52,7 +52,7 @@ Para configurar Adobe Acrobat Sign para [!DNL Vault], un nuevo grupo denominado 
 
 ### Paso 2. Implementar el paquete {#deploy-package}
 
-[Implementar el paquete](https://helpx.adobe.com/content/dam/help/en/PKG-AdobeSign-Integration-veeva.zip) y sigue los pasos. Una vez implementado, el paquete crea:
+[Implementar el paquete](https://helpx.adobe.com/content/dam/help/en/sign-integrations-new/veeva-vault/PKG-AdobeSign-Integration-Veeva.zip) y sigue los pasos. Una vez implementado, el paquete crea:
 
 * Objetos personalizados: Objeto Signature, objeto Signatory, objeto Signature Event, objeto Process Locker
 * Diseño de página de objeto de firma
