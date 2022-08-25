@@ -10,7 +10,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 08d55f79fd4fff8f13dc23b9d155e501ca038be1
+source-git-commit: c09759f2455b476fd1093d845cee4f5c3c3601d7
 workflow-type: tm+mt
 source-wordcount: '4169'
 ht-degree: 3%
@@ -289,13 +289,13 @@ Desactivar superposiciones de depósito (disable_vault_overlays__v) es un campo 
 
 El nuevo tipo de copia denominado *Adobe Sign Rendition (adobe_sign_rendition__c)* Vault lo utiliza para cargar documentos firmados del PDF en Adobe Acrobat Sign. Debe declarar la copia de Adobe Sign para cada tipo de documento que sea apto para Adobe Acrobat Signature.
 
-Debe declarar la copia original para cada tipo de documento que sea apto para Adobe Acrobat Signature.
-
 ![Imagen de tipos de representación](images/rendition-type.png)
 
 ![Imagen](images/edit-details-clinical.png)
 
 El nuevo tipo de copia denominado *Copia original* (original_rendition__c) lo utiliza la integración del depósito como nombre de la copia que se debe utilizar para almacenar la copia visible original si el documento firmado se importa como copia visible.
+
+Debe declarar la copia original para cada tipo de documento que sea apto para Adobe Acrobat Signature.
 
 ![Imagen](images/original-rendition.png)
 
