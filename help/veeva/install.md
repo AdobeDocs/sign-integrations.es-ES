@@ -10,9 +10,9 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 163c74a2e03aeaa0627d972b791166d4ea4e66a6
+source-git-commit: 08d55f79fd4fff8f13dc23b9d155e501ca038be1
 workflow-type: tm+mt
-source-wordcount: '3933'
+source-wordcount: '4169'
 ht-degree: 3%
 
 ---
@@ -289,13 +289,40 @@ Desactivar superposiciones de depósito (disable_vault_overlays__v) es un campo 
 
 El nuevo tipo de copia denominado *Adobe Sign Rendition (adobe_sign_rendition__c)* Vault lo utiliza para cargar documentos firmados del PDF en Adobe Acrobat Sign. Debe declarar la copia de Adobe Sign para cada tipo de documento que sea apto para Adobe Acrobat Signature.
 
+Debe declarar la copia original para cada tipo de documento que sea apto para Adobe Acrobat Signature.
+
 ![Imagen de tipos de representación](images/rendition-type.png)
 
 ![Imagen](images/edit-details-clinical.png)
 
-El nuevo tipo de copia denominado *Copia original (original_rendition__c)* lo utiliza la integración del almacén como nombre de la copia que se debe utilizar para almacenar la copia visible original si el documento firmado se importa como copia visible.
+El nuevo tipo de copia denominado *Copia original* (original_rendition__c) lo utiliza la integración del depósito como nombre de la copia que se debe utilizar para almacenar la copia visible original si el documento firmado se importa como copia visible.
 
 ![Imagen](images/original-rendition.png)
+
+Opcionalmente, el almacén puede tener un nuevo tipo de copia Adobe de copia de pista de auditoría (adobe_audit_trail_rendition__c), que utiliza la integración del almacén para almacenar el informe de pista de auditoría de Adobe.
+
+Siga los pasos que se indican a continuación para configurar la representación de pista de auditoría de Adobe:
+
+1. Vaya a **Tipo de copia** > **Crear nuevo tipo de copia**.
+Cree el nuevo tipo de copia como representación de pista de auditoría (adobe_audit_trail_rendition__c).
+
+   ![Imagen](images/audit-trail-rendition-setup-1.png)
+
+1. Para ver y descargar la representación de pista de auditoría de Adobe para el documento, declare *Representación de pista de auditoría de Adobe* para cada tipo de documento que sea apto para Adobe Acrobat Signature.
+
+   ![Imagen](images/audit-trail-rendition-setup-2.png)
+
+**Nota**: Puede elegir adjuntar el informe de auditoría a la copia firmada habilitando **[!UICONTROL Adjuntar informe de auditoría a la copia firmada]** y también mostrar la copia habilitando ****[!UICONTROL Mostrar representación de Acrobat Sign]**** en Configuración de la IU de administración.
+
+![Imagen](images/audit-trail-rendition-setup-3.png)
+
+Cuando un usuario opta por un acuerdo de firma digital con la configuración anterior, aparece un mensaje (como se muestra a continuación) que indica que Adobe Acrobat Sign utiliza PDF Portfolio para combinar informes de seguimiento de auditoría y de PDF firmados digitalmente.
+
+Para ver el contenido del documento junto con la firma digital y el seguimiento de auditoría, no seleccione &quot;Adjuntar informe de auditoría a la copia firmada&quot; con &quot;Mostrar copia de Acrobat Sign&quot; en la IU del administrador para la firma digital.
+
+Puede descargar o ver la pista de auditoría de Adobe como una copia independiente de la copia firmada.
+
+![Imagen](images/audit-trail-rendition-setup-4.png)
 
 ### Paso 9. Actualizar acciones web {#web-actions}
 
