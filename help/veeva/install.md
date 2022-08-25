@@ -10,9 +10,9 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 00db62c894df93abac31bf8196730382d54e8fa0
+source-git-commit: 76f1be575130e89d96dfe45f7343382b3a519903
 workflow-type: tm+mt
-source-wordcount: '4176'
+source-wordcount: '4171'
 ht-degree: 3%
 
 ---
@@ -320,7 +320,7 @@ Cuando un usuario opta por un acuerdo de firma digital con la configuración ant
 
 Para ver el contenido del documento junto con la firma digital y el seguimiento de auditoría, no seleccione &quot;Adjuntar informe de auditoría a la copia firmada&quot; con &quot;Mostrar copia de Acrobat Sign&quot; en la IU del administrador para la firma digital.
 
-Puede descargar o ver la pista de auditoría de Adobe como una copia independiente de la copia firmada mediante la función &quot;Copia de pista de auditoría de Adobe&quot;.
+Puede utilizar la representación de pista de auditoría de Adobe para descargar o ver la pista de auditoría de Adobe como una copia independiente.
 
 ![Imagen](images/audit-trail-rendition-setup-4.png)
 
