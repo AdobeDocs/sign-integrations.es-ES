@@ -1,20 +1,19 @@
 ---
-user-guide-title: Guía de integración de Adobe Sign
+user-guide-title: Guía de integraciones de Adobe Sign
 index: true
 role: Leader
-source-git-commit: 27610773d47a947dbfa1deb3f594667406a9aefb
+source-git-commit: 87818d90ab5e223d2d154f4449702e1c4c23473a
 workflow-type: tm+mt
-source-wordcount: '70'
-ht-degree: 27%
+source-wordcount: '68'
+ht-degree: 25%
 
 ---
 
 
-# Guía de integración de Adobe Sign {#using}
+# Guía de integraciones de Adobe Sign {#using}
 
 + [Integraciones de Adobe Sign](home.md)
-+ [Novedades](whats-new.md)
-+ [Versiones y ciclo de vida del producto](versions.md)
++ [Versiones de productos y ciclo de vida](versions.md)
 + Adobe Sign para [!DNL Workday] {#workday}
    + [Guía de instalación](workday/install.md)
    + [Guía de inicio rápido](workday/quick-start.md)
