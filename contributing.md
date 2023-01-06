@@ -1,60 +1,47 @@
 ---
-source-git-commit: 8cb918e2d0d438d39a9f14f719c28b5981ff2656
+source-git-commit: 85743a2442808fa200a39d2e9bc27d4853dd2360
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '294'
 ht-degree: 0%
 
 ---
 # Colaboración
 
-¡Gracias por elegir colaborar!
+¡Gracias por colaborar!
 
-A continuación se incluye un conjunto de directrices a seguir al colaborar en este proyecto.
+A continuación se muestra un conjunto de directrices que debe seguir para colaborar en este proyecto.
 
 ## Código De Conducta
 
-Este proyecto se adhiere al Adobe [código de conducta](code-of-conduct.md). Participando
-se espera que mantenga este código. Informe de comportamientos inaceptables a
+Este proyecto se adhiere al Adobe [código de conducta](code-of-conduct.md). Al participar, se espera que cumpla este código. Denuncia cualquier comportamiento inaceptable a
 [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com).
 
-## Documentación de la Guía del Colaborador
+## Documentación de la Guía del colaborador
 
-Consulte la [Guía de Colaboradores](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html).
+Consulte la [Guía de colaboradores](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
 
-## ¿Tienes Alguna Pregunta?
+## ¿Tiene Alguna Pregunta?
 
-Comience por registrar un problema. Los actuales comités que se ocupan de este proyecto trabajan para alcanzar
-consenso en torno a la dirección del proyecto y solución de problemas dentro de los hilos de problemas
-(cuando proceda).
+Comience por registrar un problema. Los actuales confirmadores de este proyecto trabajan para alcanzar un consenso en torno a la dirección del proyecto y a las soluciones de problemas en los hilos de problemas (cuando proceda).
 
 ## Contrato de licencia de colaborador
 
-Todas las contribuciones de terceros a este proyecto deben ir acompañadas de un colaborador firmado
-acuerdo de licencia. Esto da permiso al Adobe para redistribuir sus contribuciones
-como parte del proyecto. [Firme nuestro CLA](http://opensource.adobe.com/cla.html). Usted
-solo tiene que enviar un Adobe CLA una vez, por lo que si ha enviado uno anteriormente,
-¡Estás listo!
+Todas las contribuciones de terceros a este proyecto deben ir acompañadas de un acuerdo de licencia de colaborador firmado. Esto da permiso al Adobe para redistribuir sus aportaciones como parte del proyecto. [Firma nuestro CLA](http://opensource.adobe.com/cla.html). Solo tiene que enviar un CLA de Adobe una vez, por lo que si ha enviado uno anteriormente, está listo para ir!
 
-## Reseñas de código
+## Revisiones de código
 
-Todas las presentaciones deben presentarse en forma de solicitudes de retirada y deben revisarse
-por los comités del proyecto. Leer [la documentación de solicitud de extracción de GitHub](https://help.github.com/articles/about-pull-requests/)
-para obtener más información sobre el envío de solicitudes de extracción.
+Todos los envíos deben presentarse en forma de solicitudes de recepción y deben revisarlos los confirmadores del proyecto. Leer [Documentación de solicitud de recepción de GitHub](https://help.github.com/articles/about-pull-requests/)
+para obtener más información sobre el envío de solicitudes de recepción.
 
 <!--
 Lastly, please follow the [pull request template](PULL_REQUEST_TEMPLATE.md) when
 submitting a pull request!
 -->
 
-## De Colaborador A Commitente
+## De Colaborador A Comités
 
-¡Nos encantan las contribuciones de nuestra comunidad! Si quieres ir más allá del colaborador
-y convertirse en un responsable con acceso completo de escritura y voz en el proyecto, debe
-ser invitado al proyecto. Los actuales comités emplean una candidatura interna
-proceso que debe alcanzar un consenso flojo (el silencio es aprobación) antes de las invitaciones
-se emiten. Si cree que está cualificado y desea involucrarse más profundamente,
-siéntase libre de contactar con los ya existentes para tener una conversación al respecto.
+Nos encantan las contribuciones de nuestra comunidad! Si quieres ir más allá de ser colaborador y convertirte en un confirmador con acceso completo de escritura y voz en el proyecto, debes ser invitado al proyecto. Los actuales confirmadores emplean un proceso interno de nominación que debe alcanzar un consenso perezoso (el silencio es aprobación) antes de que se emitan las invitaciones. Si cree que está cualificado y desea implicarse más, contacte con los confirmadores existentes para hablar sobre ello.
 
 ## Problemas de seguridad
 
-Los problemas de seguridad no deben notificarse en este rastreador de problemas. En su lugar, [presente un problema a nuestros expertos en seguridad](https://helpx.adobe.com/security/alertus.html)
+No se deben notificar problemas de seguridad en este rastreador de problemas. En su lugar, [presentar un problema a nuestros expertos en seguridad](https://helpx.adobe.com/security/alertus.html)
