@@ -10,12 +10,12 @@ exl-id: d181bd5c-2f79-4ca1-85be-d0ee087d1655
 source-git-commit: d462ccf41fa5483cfa02f5eaf154c23f26157a1e
 workflow-type: tm+mt
 source-wordcount: '39'
-ht-degree: 12%
+ht-degree: 0%
 
 ---
 
 # Configurar Adobe Sign para [!DNL Workday]
 
-Puede integrar fácilmente Adobe Sign en [!DNL Workday] para optimizar los flujos de trabajo de firma. Vea el tutorial de vídeo para aprender a configurar Adobe Sign para [!DNL Workday].
+Puede integrar fácilmente Adobe Sign en [!DNL Workday] para agilizar tus flujos de trabajo de firmas. Vea el tutorial de vídeo para saber cómo configurar Adobe Sign para [!DNL Workday].
 
 >[!VIDEO](https://video.tv.adobe.com/v/39372?hidetitle=true)

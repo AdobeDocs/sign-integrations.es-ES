@@ -13,15 +13,15 @@ exl-id: 5d61a428-06e4-413b-868a-da296532c964
 source-git-commit: 76f1be575130e89d96dfe45f7343382b3a519903
 workflow-type: tm+mt
 source-wordcount: '4171'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 
 # [!DNL Veeva Vault] Guía de instalación{#veeva-installation-guide}
 
-[**Contactar con Asistencia técnica de Adobe Acrobat Sign**](https://adobe.com/go/adobesign-support-center_es)
+[**Contactar con Asistencia técnica de Adobe Acrobat Sign**](https://adobe.com/go/adobesign-support-center)
 
-## Información general {#overview}
+## Resumen {#overview}
 
 En este documento se explica cómo integrar Adobe Acrobat Sign con [!DNL Veeva Vault] plataforma. [!DNL Veeva Vault] es una plataforma de gestión de contenido empresarial (ECM) creada para las ciencias biológicas. Una &quot;Caja fuerte&quot; es un repositorio de contenido y datos con un uso típico para solicitudes de normativas, informes de investigación, solicitudes de subvenciones, contratación general y mucho más. Una sola empresa puede tener varias &quot;cajas fuertes&quot; que deben mantenerse por separado.
 
@@ -79,7 +79,7 @@ El objeto de firma se crea para almacenar información relacionada con el acuerd
 
 | Campo | Etiqueta | Tipo | Descripción |
 |:---|:---|:---|:------- | 
-| external_id__c | ID del acuerdo | Cadena (100) | Contiene el ID exclusivo del acuerdo de Adobe Acrobat Sign |
+| external_id__c | Id De Acuerdo | Cadena (100) | Contiene el ID exclusivo del acuerdo de Adobe Acrobat Sign |
 | file_hash__c | Hash de archivo | Cadena (50) | Contiene la suma de comprobación md5 del archivo enviado a Adobe Acrobat Sign |
 | name__v | Nombre | Cadena (128) | Contiene el nombre del acuerdo |
 | sender__c | Remitente | Objeto (usuario) | Contiene la referencia al usuario de Vault que ha creado el acuerdo |
@@ -105,7 +105,7 @@ El objeto de firmante se crea para almacenar información relacionada con los pa
 | email__c | Correo electrónico | Cadena (120) | Contiene el ID exclusivo del acuerdo de Adobe Acrobat Sign |
 | external_id__c | ID de participante | Cadena (80) | Contiene el identificador único de participante de Adobe Acrobat Sign |
 | name__v | Nombre | Cadena (128) | Contiene el nombre del participante de Adobe Acrobat Sign |
-| order__c | Ordenar | Número | Conserva el número de pedido del participante del acuerdo de Adobe Acrobat Sign |
+| order__c | Orden | Número | Conserva el número de pedido del participante del acuerdo de Adobe Acrobat Sign |
 | role_c | Función | Cadena (30) | Mantiene la función del participante del acuerdo de Adobe Acrobat Sign |
 | signature__c | Firma | Objeto (firma) | Contiene la referencia al registro principal de la firma |
 | signature_status__c | Estado de firma | Cadena (100) | Mantiene el estado del participante del acuerdo de Adobe Acrobat Sign |
@@ -121,7 +121,7 @@ Campos de objeto de evento de firma
 
 | Campo | Etiqueta | Tipo | Descripción |
 |:---|:---|:---|:-------- | 
-| acting_user_email__c | Correo electrónico del usuario activo | Cadena | Contiene el correo electrónico del usuario de Adobe Acrobat Sign que realizó la acción que provocó el evento que se generó |
+| acting_user_email__c | Correo electrónico del usuario interino | Cadena | Contiene el correo electrónico del usuario de Adobe Acrobat Sign que realizó la acción que provocó el evento que se generó |
 | acting_user_name__c | Nombre de usuario interino | Cadena | Contiene el nombre del usuario de Adobe Acrobat Sign que realizó la acción que provocó el evento |
 | description__c | Descripción | Cadena | Contiene la descripción del evento de Adobe Acrobat Sign |
 | event_date__c | Fecha del evento | FechaHora | Celebra la fecha y hora del evento de Adobe Acrobat Sign |
@@ -152,7 +152,7 @@ Campos de objeto del registro de tareas de integración de Adobe Sign
 | Campo | Etiqueta | Tipo | Descripción |
 |:--|:--|:--|:---------| 
 | start_date__c | Fecha de inicio | FechaHora | Fecha de inicio de tarea |
-| end_date__c | Fecha finalización | FechaHora | Fecha de finalización de tarea |
+| end_date__c | Fecha de finalización | FechaHora | Fecha de finalización de tarea |
 | task_status__c | Estado de tarea | Lista de selección | Mantiene el estado de la tarea: <br /> Completado (task_completed__c) Completado con errores (task_completed_with_errors__c) Error (task_failed__c) |
 | task_type__c | Tipo de tarea | Lista de selección | Tipo de tarea de retención: <br><br> Eventos del acuerdo Sincronización (agreements_events_sync__c) Eventos del acuerdo Procesamiento (agreements_events_processing__c) |
 | messages__c | Mensaje | Largo (32000) | Retener mensaje de tarea |
@@ -350,7 +350,7 @@ El ciclo de vida del acuerdo de Adobe Acrobat Sign tiene los siguientes estados:
 * AUTHORING o DOCUMENTS_NOT_YET_PROCESSED
 * OUT_FOR_SIGNATURE o OUT_FOR_APPROVAL
 * FIRMADO o APROBADO
-* CANCELADA
+* CANCELADO
 * CADUCADO
 
 Para actualizar el ciclo de vida del documento, siga estos pasos:

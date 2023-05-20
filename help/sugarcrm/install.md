@@ -11,14 +11,14 @@ exl-id: 0512f616-568a-4b96-9bd1-48e67bc3536b
 source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
 workflow-type: tm+mt
 source-wordcount: '2354'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
 
 # [!DNL SugarCRM] Guía de instalación {#sugarcrm-install-guide}
 
-[Contactar con Atención al cliente](https://adobe.com/go/adobesign-support-center_es)
+[Contactar con Atención al cliente](https://adobe.com/go/adobesign-support-center)
 
 Adobe [!DNL EchoSign] para [!DNL SugarCRM] es una solución líder en firma electrónica y contratación web que ofrece automatización de la firma electrónica en [!DNL SugarCRM] para firmas electrónicas y firmas de fax. Los usuarios pueden enviar contratos directamente desde SugarCRM, ver el historial de contratos y guardar contratos firmados electrónicamente con cuentas, contactos, presupuestos y mucho más asociados.
 Adobe [!DNL EchoSign] para [!DNL SugarCRM] está disponible para todas las versiones compatibles de SugarCRM, incluidas las versiones 6.3 a 6.7 para soluciones locales o bajo demanda.
@@ -233,7 +233,7 @@ Al visualizar un presupuesto, seleccione **[!UICONTROL Crear acuerdo de EchoSign
 
 Para desactivar la adición automática del PDF de presupuesto al acuerdo, vaya a **[!UICONTROL Administración]** > **[!UICONTROL Configuración de Adobe EchoSign]** y desmarque la casilla *[!UICONTROL Adjuntar PDF automáticamente al crear un acuerdo a partir de un presupuesto]*.
 
-### Cancelación de un acuerdo {#cancel-agreement}
+### Cancelar un acuerdo {#cancel-agreement}
 
 Puede cancelar una [!DNL EchoSign] Acuerdo una vez enviado para firmar si todos los destinatarios aún no han firmado el documento. A [!UICONTROL Cancelar acuerdo] aparece en la vista Detalle de un acuerdo después de enviar un documento para su firma. Seleccionar **[!UICONTROL Cancelar acuerdo]** para cancelar el acuerdo.
 

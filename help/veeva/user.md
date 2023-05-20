@@ -18,11 +18,11 @@ ht-degree: 0%
 
 # Adobe Acrobat Sign para [!DNL Veeva Vault]: Guía del usuario {#veeva-vault-user-guide}
 
-[**Contactar con Asistencia técnica de Adobe Acrobat Sign**](https://adobe.com/go/adobesign-support-center_es)
+[**Contactar con Asistencia técnica de Adobe Acrobat Sign**](https://adobe.com/go/adobesign-support-center)
 
 Este documento está diseñado para ayudar [!DNL Veeva Vault] los clientes aprenden a usar Adobe Acrobat Sign para [!DNL Veeva Vault] para enviar un acuerdo.
 
-## Información general {#overview}
+## Resumen {#overview}
 
 Integración de Adobe Acrobat Sign con [!DNL Veeva Vault] facilita el proceso de obtención de una firma o aprobación para cualquier documentación que requiera firmas legales o procesamiento de documentos auditables.
 
@@ -59,7 +59,7 @@ Para enviar un acuerdo con Adobe Acrobat Sign para Veeva:
 
 1. Para cerrar el cuadro de diálogo, seleccione **[!UICONTROL Ok]**.
 
-1. Seleccione **[!UICONTROL Siguiente]**.
+1. Seleccionar **[!UICONTROL Siguiente]**.
 
 1. En la ventana que aparece, rellene todos los campos obligatorios en la sección de metadatos y seleccione **[!UICONTROL Guardar]**.
 

@@ -11,7 +11,7 @@ exl-id: b2fa280d-894c-47da-bbf5-8b4d0c6b6165
 source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
 workflow-type: tm+mt
 source-wordcount: '121'
-ht-degree: 26%
+ht-degree: 0%
 
 ---
 
@@ -27,12 +27,12 @@ Aprenda a instalar, integrar y utilizar [!DNL Adobe Sign] soluciones a los siste
 <tr>
   <td>
     <a href="versions.md">
-    <img alt="Candidato" src="images/versions.png"/>
+    <img alt="Plomo" src="images/versions.png"/>
     </a>
     <div>
     <a href="versions.md"><strong>Versiones y ciclos de vida</strong></a>
     </div>
-    <em>Ciclo de vida y versiones de producto de las integraciones de Adobe Sign.</em>
+    <em>Versiones y ciclo de vida de los productos de Adobe Sign Integration.</em>
     <br>
   </td>
   <td>

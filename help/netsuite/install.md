@@ -11,13 +11,13 @@ exl-id: 378cac01-87c9-4288-8839-482121d49402
 source-git-commit: 568d001a05bd0e642036b4a73067689e987c02ba
 workflow-type: tm+mt
 source-wordcount: '4870'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
 # [!DNL NetSuite] Guía de instalación y personalización (v4.0.4) {#install-customize-NetSuite}
 
-## Información general {#overview}
+## Resumen {#overview}
 
 Adobe Sign para [!DNL NetSuite] proporciona una completa integración de firma electrónica con [!DNL NetSuite]. Puedes usar Adobe Sign para [!DNL NetSuite] para enviar acuerdos como contratos, presupuestos y otros documentos, que requieren firmas electrónicas, a los destinatarios directamente desde [!DNL NetSuite]. Puede crear y enviar acuerdos de Adobe Sign del cliente, cliente potencial, presupuesto y otros [!DNL NetSuite] registros. Actualizaciones de Adobe Sign [!DNL NetSuite] con el estado de acuerdos y almacena los acuerdos con los [!DNL NetSuite] una vez que se hayan ejecutado completamente. Puede ver el historial de todos los acuerdos enviados desde [!DNL NetSuite] desde dentro del producto.
 
@@ -72,7 +72,7 @@ Consulte [Crear un acuerdo de Adobe Sign](#createagreement) para obtener más in
 
 Adobe Sign utiliza OAuth 2.0 para autenticar su cuenta de Adobe Sign en [!DNL NetSuite].
 
-Este protocolo autoriza su [!DNL NetSuite] paquete para comunicarse con Adobe Sign sin solicitar la contraseña. Como la información confidencial no se comparte directamente entre aplicaciones, la cuenta estará menos expuesta a riesgos.
+Este protocolo autoriza su [!DNL NetSuite] paquete para comunicarse con Adobe Sign sin solicitar la contraseña. Como la información confidencial no se comparte directamente entre las aplicaciones, es menos probable que su cuenta se vea comprometida.
 
 Esta autenticación no afecta a su implementación, pero debe realizar una configuración única después de instalar o actualizar el paquete en su cuenta de producción o espacio aislado.
 
@@ -84,7 +84,7 @@ La [!DNL NetSuite] El administrador que configure OAuth también debe tener acce
 
 1. En la página Resultados de la búsqueda, seleccione **Ver** para el *Configuración de Adobe Sign* registro.
 
-   ![Busque Adobe Sign](images/search-for-adobesignconfig.png).
+   ![Buscar Adobe Sign](images/search-for-adobesignconfig.png)
 
 1. En la página Adobe Sign Config List, seleccione **[!UICONTROL Ver]** para el *Uso de OAuth para acceder a las API de Adobe Sign* registro.
 
@@ -100,7 +100,7 @@ La [!DNL NetSuite] El administrador que configure OAuth también debe tener acce
 
 1. En la página Confirmar acceso (para OAuth) que aparece, seleccione **[!UICONTROL Permitir acceso]**
 
-   ![Permitir el acceso](images/confirm-access.png)
+   ![Permitir acceso](images/confirm-access.png)
 
 1. Cuando se complete la autorización, se le redirigirá de nuevo a la página Configuración de Adobe Sign en [!DNL NetSuite], como se muestra a continuación.
 
@@ -261,7 +261,7 @@ Si el acuerdo se crea a partir de un registro de transacción, el primer documen
 
 En Preferencias personalizadas, también puede activar la **[!UICONTROL Use Trans. Contactar como primer firmante]** si desea que el contacto de transacción principal se agregue automáticamente como primer firmante. Cuando está asociado a un registro de transacción, muestra el **[!UICONTROL Acuerdos]** y el **[!UICONTROL Send for Signature]** botones.
 
-![Cita](images/quote.png)
+![Presupuesto](images/quote.png)
 
 ## Registros de entidad {#entity-records}
 
@@ -550,7 +550,7 @@ Después de enviar un acuerdo:
    * **Enviar recordatorio** : para enviar un recordatorio al firmante actual.
    * **Cancelar acuerdo** — Para cancelar un acuerdo. Un acuerdo se puede cancelar después de que se haya enviado para firmar si todos los destinatarios aún no lo han firmado.
 
-![Enviado para firma](images/out-for-signature.png)
+![Enviado para firmar](images/out-for-signature.png)
 
 Una nueva *Eventos* en el registro del acuerdo aparece una subpestaña donde puede realizar un seguimiento del estado del acuerdo.
 
@@ -645,6 +645,6 @@ También puede ver los registros de ejecución de la implementación de secuenci
 
 1. Seleccione la **[!UICONTROL Registro de ejecución]** en la página para mostrar el registro de script.
 
-## Soporte {#support}
+## Asistencia {#support}
 
-Vaya a la [Portal de asistencia de Adobe Sign](https://adobe.com/go/adobesign-support-center_es) para acceder a preguntas frecuentes, documentación, artículos de la base de conocimientos o para ponerse en contacto con el servicio de asistencia de Adobe.
+Vaya a la [Portal de asistencia de Adobe Sign](https://adobe.com/go/adobesign-support-center) para acceder a preguntas frecuentes, documentación, artículos de la base de conocimientos o para ponerse en contacto con el servicio de asistencia de Adobe.

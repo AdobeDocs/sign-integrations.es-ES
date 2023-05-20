@@ -12,16 +12,16 @@ topic: Integrations
 exl-id: 12c91be5-afec-4918-a8fc-ceb33bedf98b
 source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 6%
+source-wordcount: '819'
+ht-degree: 0%
 
 ---
 
 # [!DNL Coupa] Guía de instalación{#coupa-installation-guide}
 
-[**Contactar con el servicio de soporte técnico de Adobe Sign**](https://adobe.com/go/adobesign-support-center_es)
+[**Contactar con Asistencia técnica de Adobe Sign**](https://adobe.com/go/adobesign-support-center)
 
-## Información general {#overview}
+## Resumen {#overview}
 
 En este documento se explica cómo configurar su cuenta de Adobe Sign para la integración [!DNL Coupa BSM Suite] para obtener firmas.
 
@@ -45,7 +45,7 @@ Tener un uso dedicado de Adobe Sign para [!DNL Coupa] dentro de una organizació
 
 Para crear un usuario en Adobe Sign:
 
-1. Inicie sesión en Adobe Sign como administrador de la cuenta..
+1. Inicie sesión en Adobe Sign como administrador de la cuenta.
 1. Vaya a **[!UICONTROL Cuenta]** > **[!UICONTROL Usuarios]**.
 1. Para crear un nuevo usuario, haga clic en ![plus icon image](images/icon_plus.png) icono.
 1. En el cuadro de diálogo que se abre, proporcione los detalles del nuevo usuario:
@@ -58,7 +58,7 @@ Para crear un usuario en Adobe Sign:
    1. En la [!UICONTROL Grupo principal] , seleccione **[!UICONTROL Crear un nuevo grupo para este usuario]**.
    1. En la [!UICONTROL Nuevo nombre de grupo] , proporcione un nombre de grupo intuitivo como *[!DNL Coupa BSM Suite]*.
 
-   ![Panel Crear usuario](images/create-user.png)
+   ![El panel Crear un usuario](images/create-user.png)
 
 1. Seleccionar **[!UICONTROL Guardar]**.
 
@@ -71,8 +71,8 @@ Para crear un usuario en Adobe Sign:
 1. Para verificar la dirección de correo electrónico:
    1. Inicie sesión en el correo electrónico del nuevo usuario.
    2. Busque el correo electrónico de bienvenida de Adobe Sign. Compruebe las carpetas de correo no deseado si es necesario.
-   3. Haga clic donde pone **[!UICONTROL Haga clic aquí para establecer la contraseña]**.
-   4. Establezca la contraseña..
+   3. Haz clic donde dice **[!UICONTROL Haga clic aquí para establecer la contraseña]**
+   4. Establezca la contraseña.
 
    Una vez verificada la dirección de correo electrónico, el estado del usuario cambia de [!UICONTROL CREADO] para [!UICONTROL ACTIVO].
 
@@ -104,7 +104,7 @@ Para configurar el [!DNL Coupa BSM Suite]:
 1. Conecta tus [!DNL Coupa BSM Suite] a su cuenta de servicio de Adobe Sign que haya creado anteriormente.
 1. Cree una instancia de webhook de Adobe Sign para notificar a su instancia de Coupa BSM Suite las actualizaciones de los acuerdos.
 
-Para obtener más información sobre cómo conectar el [!DNL Coupa BSM Suite] y cómo crear y registrar webhook, consulte [Documentación de soporte de instancia de Adobe Sign Coupa BSM Suite](https://success.coupa.com/Support/Docs/Power_Apps/CLM_Standard/Signing_and_Approvals/Enable_E-Signatures_Through_Adobe_Sign_and_DocuSign){target=&quot;_blank&quot;}.
+Para obtener más información sobre cómo conectar el [!DNL Coupa BSM Suite] y cómo crear y registrar webhook, consulte [Documentación de soporte de instancia de Adobe Sign Coupa BSM Suite](https://success.coupa.com/Support/Docs/Power_Apps/CLM_Standard/Signing_and_Approvals/Enable_E-Signatures_Through_Adobe_Sign_and_DocuSign){target="_blank"}.
 
 ## Crear [!DNL Webhook] en Adobe Sign {#create-webhook}
 
@@ -130,13 +130,13 @@ Para crear un webhook en Adobe Sign:
 
 1. Seleccionar **Guardar**.
 
-## Soporte {#support}
+## Asistencia {#support}
 
 ### [!DNL Coupa BSM Suite] apoyo {#coupa-support}
 
 [!DNL Coupa BSM Suite ] es el propietario de la integración y debe ser su primer punto de contacto para preguntas sobre el ámbito de la integración, solicitudes de funciones o problemas en el funcionamiento diario de la integración.
 
-Para cualquier consulta, póngase en contacto con [Compatibilidad con Coupa](https://success.coupa.com/Support/Welcome_to_Coupa_Support){target=&quot;_blank&quot;}.
+Para cualquier consulta, póngase en contacto con [Compatibilidad con Coupa](https://success.coupa.com/Support/Welcome_to_Coupa_Support){target="_blank"}.
 
 ### Compatibilidad con Adobe Sign {#adobe-sign-support}
 
